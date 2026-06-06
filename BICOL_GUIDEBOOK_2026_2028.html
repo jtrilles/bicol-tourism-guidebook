@@ -7,71 +7,64 @@
 <meta http-equiv="Expires" content="0">
 <title>Bicol Region Tourism Guidebook 2026-2028</title>
 <style>
-/* Design Read: Government publication, institutional, authoritative */
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap');
+/* Design: Professional, authoritative, clean */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap');
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Source Serif 4', Georgia, serif; color: #1B1B1B; line-height: 1.75; font-size: 16px; background: #FAFAF8; }
+body { font-family: 'Source Serif 4', Georgia, serif; color: #1A1A1A; line-height: 1.75; font-size: 16px; background: #FAFAF8; }
 .content { max-width: 880px; margin: 0 auto; padding: 3rem 2rem 4rem; background: #FFFFFF; }
-.skip-link { position: absolute; top: -100px; left: 0; background: #1B3A2D; color: white; padding: 8px 16px; z-index: 100; font-family: 'Public Sans', sans-serif; font-size: 14px; text-decoration: none; }
+.skip-link { position: absolute; top: -100px; left: 0; background: #1B3A2D; color: white; padding: 8px 16px; z-index: 100; font-family: 'Inter', sans-serif; font-size: 14px; text-decoration: none; }
 .skip-link:focus { top: 0; }
-.top-bar { background: #1B3A2D; padding: 0; position: sticky; top: 0; z-index: 50; border-bottom: 3px solid #2C5F4A; }
+.top-bar { background: #1B3A2D; padding: 0; position: sticky; top: 0; z-index: 50; }
 .top-bar-inner { max-width: 880px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; min-height: 48px; }
-.top-bar .site-title { font-family: 'Public Sans', sans-serif; font-size: 14px; font-weight: 600; color: white; text-decoration: none; }
-.top-bar .back-link { font-family: 'Public Sans', sans-serif; font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; }
-h1 { font-family: 'Public Sans', sans-serif; font-size: 28px; font-weight: 700; color: #1B3A2D; margin: 2.5rem 0 0.75rem; padding-bottom: 8px; border-bottom: 3px solid #1B3A2D; }
+.top-bar .site-title { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: white; text-decoration: none; letter-spacing: 0.2px; }
+.top-bar .back-link { font-family: 'Inter', sans-serif; font-size: 13px; color: rgba(255,255,255,0.65); text-decoration: none; }
+.top-bar .back-link:hover { color: white; }
+h1 { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 700; color: #1B3A2D; margin: 2.5rem 0 0.75rem; padding-bottom: 8px; border-bottom: 2px solid #1B3A2D; line-height: 1.25; letter-spacing: -0.3px; }
 h1:first-of-type { margin-top: 0.5rem; }
-h2 { font-family: 'Public Sans', sans-serif; font-size: 20px; font-weight: 600; color: #1B3A2D; margin: 1.5rem 0 0.5rem; padding-bottom: 4px; border-bottom: 1.5px solid #B8C6B8; }
-h3 { font-family: 'Public Sans', sans-serif; font-size: 17px; font-weight: 600; color: #2D3D32; margin: 1.2rem 0 0.4rem; }
+h2 { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 600; color: #1B3A2D; margin: 1.5rem 0 0.5rem; padding-bottom: 4px; border-bottom: 1.5px solid #D0D8D0; }
+h3 { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; color: #2D3D32; margin: 1.2rem 0 0.4rem; }
 p { margin: 0.5rem 0; line-height: 1.75; color: #2A2A2A; }
 .table-wrapper { overflow-x: auto; margin: 1rem 0; border: 1px solid #E0E4E0; border-radius: 4px; }
-table { width: 100%; border-collapse: collapse; font-family: 'Public Sans', sans-serif; font-size: 14px; min-width: 600px; }
-th { background: #1B3A2D; color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase; }
+table { width: 100%; border-collapse: collapse; font-family: 'Inter', sans-serif; font-size: 14px; min-width: 600px; }
+th { background: #1B3A2D; color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 12px; letter-spacing: 0.3px; text-transform: uppercase; }
 td { padding: 8px 12px; border: 1px solid #E0E4E0; vertical-align: top; }
 tr:nth-child(even) { background: #F7FAF7; }
-.callout { background: #F5F7F5; border-left: 4px solid #1B3A2D; padding: 16px 20px; margin: 1rem 0; font-family: 'Public Sans', sans-serif; font-size: 14px; line-height: 1.6; border-radius: 0 4px 4px 0; }
+.callout { background: #F5F7F5; border-left: 4px solid #1B3A2D; padding: 16px 20px; margin: 1rem 0; font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.6; border-radius: 0 4px 4px 0; }
 .callout.info { border-left-color: #2C5F74; background: #F0F4F8; }
 .callout.warn { border-left-color: #8B6914; background: #FCF9F0; }
 .callout.goal { border-left-color: #8B2C2C; background: #FCF3F2; }
 .insight-box { background: #EDF3ED; border: 1px solid #C8D8C8; padding: 16px 20px; margin: 1rem 0; border-radius: 4px; }
-.insight-box .label { font-family: 'Public Sans', sans-serif; font-size: 12px; font-weight: 700; color: #1B3A2D; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
-.insight-box p { font-family: 'Public Sans', sans-serif; font-size: 14px; color: #2A2A2A; }
+.insight-box .label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; color: #1B3A2D; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.insight-box p { font-family: 'Inter', sans-serif; font-size: 14px; color: #2A2A2A; margin: 0.3rem 0; }
 .kpi-row { display: flex; gap: 12px; margin: 1rem 0; flex-wrap: wrap; }
-.kpi { flex: 1; min-width: 150px; text-align: center; padding: 16px 12px; background: #F5F7F5; border: 1px solid #D0D8D0; border-radius: 4px; }
-.kpi .val { font-family: 'Public Sans', sans-serif; font-size: 24px; font-weight: 700; color: #1B3A2D; }
-.kpi .lbl { font-family: 'Public Sans', sans-serif; font-size: 11px; color: #666; text-transform: uppercase; }
+.kpi { flex: 1; min-width: 140px; text-align: center; padding: 16px 12px; background: #F5F7F5; border: 1px solid #D0D8D0; border-radius: 4px; }
+.kpi .val { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700; color: #1B3A2D; line-height: 1.2; }
+.kpi .lbl { font-family: 'Inter', sans-serif; font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+.chart-container { text-align: center; margin: 1.5rem 0; padding: 1.5rem; background: #F7FAF7; border: 1px solid #E0E4E0; border-radius: 4px; }
+.chart-container svg { max-width: 100%; height: auto; }
+.chart-title { font-family: 'Inter', sans-serif; font-size: 12px; color: #666; margin-top: 8px; }
 .comparison { display: flex; gap: 16px; margin: 1rem 0; }
-.comp-item { flex: 1; padding: 16px 20px; border-radius: 4px; font-size: 14px; }
+.comp-item { flex: 1; padding: 16px 20px; border-radius: 4px; font-size: 14px; line-height: 1.55; }
 .comp-item.benchmark { background: #FCF3F2; border: 1px solid #E8C8C8; }
 .comp-item.bicol { background: #F0F5F0; border: 1px solid #C8D8C8; }
-.comp-item .label { font-family: 'Public Sans', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
-.chart-container { text-align: center; margin: 1.5rem 0; padding: 1rem; background: #F7FAF7; border: 1px solid #E0E4E0; border-radius: 4px; }
-.chart-container svg { max-width: 100%; height: auto; }
-.chart-title { font-family: 'Public Sans', sans-serif; font-size: 13px; color: #666; margin-top: 8px; }
-.part { margin: 3rem 0 1.5rem; padding: 2rem 0; text-align: center; border-top: 2px solid #E0E4E0; border-bottom: 2px solid #E0E4E0; background: #F5F7F5; border-radius: 4px; }
-.part .part-num { font-family: 'Public Sans', sans-serif; font-size: 48px; font-weight: 700; color: #1B3A2D; }
-.part .part-title { font-family: 'Public Sans', sans-serif; font-size: 24px; font-weight: 700; color: #1B3A2D; margin: 0.5rem 0 0.3rem; }
-.part .part-desc { max-width: 600px; margin: 0 auto; font-size: 15px; color: #555; }
-.cover { margin: 0; padding: 4rem 2rem; background: #1B3A2D; color: white; text-align: center; border-radius: 4px; }
-.cover h1 { font-size: 32px; font-weight: 700; color: white; border: none; margin: 1rem 0; font-size: 32px; }
-.cover .subtitle { font-family: 'Public Sans', sans-serif; font-size: 18px; opacity: 0.85; }
-.cover .badge { display: inline-block; border: 1px solid rgba(255,255,255,0.3); padding: 6px 16px; font-family: 'Public Sans', sans-serif; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); }
-.cover .meta { font-family: 'Public Sans', sans-serif; font-size: 14px; opacity: 0.6; margin-top: 1.5rem; }
-.cover .target-row { display: flex; gap: 1.5rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap; }
-.cover .target-num { font-family: 'Public Sans', sans-serif; font-size: 24px; font-weight: 700; opacity: 0.9; color: #C4974A; }
-.cover .target-label { font-family: 'Public Sans', sans-serif; font-size: 11px; opacity: 0.6; text-transform: uppercase; }
+.comp-item .label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.cover { margin: 0; padding: 3rem 2rem; background: #1B3A2D; color: white; text-align: center; border-radius: 4px; }
+.cover h1 { font-size: 30px; font-weight: 700; color: white; border: none; margin: 0.5rem 0; letter-spacing: -0.5px; }
+.cover .subtitle { font-family: 'Inter', sans-serif; font-size: 16px; opacity: 0.8; }
+.cover .meta { font-family: 'Inter', sans-serif; font-size: 13px; opacity: 0.6; margin-top: 1rem; }
+.part { margin: 2.5rem 0 1.5rem; padding: 1.5rem 0; text-align: center; border-top: 2px solid #E0E4E0; border-bottom: 2px solid #E0E4E0; background: #F5F7F5; border-radius: 4px; }
+.part .part-num { font-family: 'Inter', sans-serif; font-size: 40px; font-weight: 700; color: #1B3A2D; letter-spacing: 2px; }
+.part .part-title { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700; color: #1B3A2D; margin: 0.4rem 0 0.2rem; }
+.part .part-desc { max-width: 560px; margin: 0 auto; font-size: 14px; color: #555; }
 .toc { margin: 2rem 0; padding: 1.5rem; background: #F5F7F5; border-radius: 4px; border: 1px solid #E0E4E0; }
-.toc h1 { margin-top: 0; font-size: 22px; }
-.toc-item { display: flex; padding: 6px 0; border-bottom: 1px dotted #D0D8D0; font-family: 'Public Sans', sans-serif; font-size: 14px; }
-.toc-item .num { font-weight: 600; color: #1B3A2D; min-width: 2rem; }
-.toc-part { font-family: 'Public Sans', sans-serif; font-weight: 600; font-size: 15px; color: #1B3A2D; padding: 10px 0 4px; border-bottom: 2px solid #1B3A2D; }
-.doc-footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 2px solid #E0E4E0; font-family: 'Public Sans', sans-serif; font-size: 13px; color: #888; }
-.status-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; }
-.status-dot.green { background: #27AE60; }
-.status-dot.yellow { background: #C4974A; }
-.status-dot.red { background: #C0392B; }
+.toc h1 { margin-top: 0; font-size: 20px; }
+.toc-item { display: flex; padding: 5px 0; border-bottom: 1px dotted #D0D8D0; font-family: 'Inter', sans-serif; font-size: 14px; }
+.toc-item .num { font-weight: 600; color: #1B3A2D; min-width: 1.8rem; }
+.toc-part { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; color: #1B3A2D; padding: 8px 0 4px; border-bottom: 2px solid #1B3A2D; }
+.doc-footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 2px solid #E0E4E0; font-family: 'Inter', sans-serif; font-size: 12px; color: #888; line-height: 1.6; }
 ul, ol { margin: 0.5rem 0 0.5rem 1.8rem; }
-li { margin: 0.3rem 0; }
-@media (max-width: 700px) { .content { padding: 1.5rem 1rem; } .cover { padding: 2rem 1rem; } .cover h1 { font-size: 24px; } .kpi-row { flex-direction: column; } .comparison { flex-direction: column; } h1 { font-size: 24px; } .toc-item { font-size: 13px; } }
+li { margin: 0.3rem 0; line-height: 1.6; }
+@media (max-width: 700px) { .content { padding: 1.5rem 1rem; } .cover h1 { font-size: 24px; } .kpi-row { flex-direction: column; } .comparison { flex-direction: column; } h1 { font-size: 22px; } }
 @media print { .top-bar { display: none; } .content { max-width: none; padding: 0; } }
 </style>
 </head>
@@ -86,12 +79,12 @@ li { margin: 0.3rem 0; }
  <h1>Bicol Tourism Guidebook</h1>
  <div class="subtitle">Comprehensive Destination Management &amp; Marketing Plan 2026–2028</div>
 <div style="background:#F5F7F5; border:1px solid #E0E4E0; border-radius:4px; padding:1.5rem 2rem; margin:1.5rem 0; text-align:center;">
-  <p style="font-family:'Public Sans',sans-serif; font-size:14px; color:#555; margin-bottom:0.5rem;">
-    <strong style="color:#1B3A2D;">Bicol Region</strong> — 6 provinces · 18,155 km² · 6.3M population
-  </p>
-  <p style="font-family:'Public Sans',sans-serif; font-size:13px; color:#777;">
-    2024 arrivals: <strong style="color:#1B3A2D;">4.44M</strong> · Revenue: <strong style="color:#1B3A2D;">PHP 3.3B</strong> · Foreign share: <strong style="color:#C0392B;">1.2%</strong>
-  </p>
+ <p style="font-family:'Public Sans',sans-serif; font-size:14px; color:#555; margin-bottom:0.5rem;">
+ <strong style="color:#1B3A2D;">Bicol Region</strong> — 6 provinces · 18,155 km² · 6.3M population
+ </p>
+ <p style="font-family:'Public Sans',sans-serif; font-size:13px; color:#777;">
+ 2024 arrivals: <strong style="color:#1B3A2D;">4.44M</strong> · Revenue: <strong style="color:#1B3A2D;">PHP 3.3B</strong> · Foreign share: <strong style="color:#C0392B;">1.2%</strong>
+ </p>
 </div>
  <div class="meta">
  
@@ -215,11 +208,11 @@ li { margin: 0.3rem 0; }
 
 <table>
 <tr><th>Focus Area</th><th>Description</th><th>Bicol Status</th><th>Gap</th></tr>
-<tr><td><strong>R</strong> — Resilient Tourism</td><td>Build systems that withstand shocks — natural disasters, health crises, economic volatility</td><td>⚠️ Partial</td><td>No formal crisis management framework or tourism insurance scheme</td></tr>
-<tr><td><strong>E</strong> — Empowered People</td><td>Workforce development, mutual recognition of skills, inclusive employment</td><td>⚠️ Developing</td><td>No accredited tourism training center in 4 of 6 provinces</td></tr>
-<tr><td><strong>A</strong> — Accessible &amp; Seamless Travel</td><td>Multi-modal connectivity, streamlined procedures, second-tier destination access</td><td>⚠️ Weak</td><td>Limited air access, no regional transport integration</td></tr>
-<tr><td><strong>D</strong> — Digital Tourism &amp; Diversification</td><td>Digital tools for MSMEs, data-driven marketing, product diversification (gastronomy, wellness, MICE, cruise)</td><td>⚠️ Emerging</td><td>No digital platform, limited data collection, no MICE strategy</td></tr>
-<tr><td><strong>S</strong> — Sustainable Tourism</td><td>Low-carbon operations, community-based tourism, international certification</td><td>⚠️ Partial</td><td>No certified sustainable destinations, no carbon monitoring</td></tr>
+<tr><td><strong>R</strong> — Resilient Tourism</td><td>Build systems that withstand shocks — natural disasters, health crises, economic volatility</td><td>[Partial] Partial</td><td>No formal crisis management framework or tourism insurance scheme</td></tr>
+<tr><td><strong>E</strong> — Empowered People</td><td>Workforce development, mutual recognition of skills, inclusive employment</td><td>[Partial] Developing</td><td>No accredited tourism training center in 4 of 6 provinces</td></tr>
+<tr><td><strong>A</strong> — Accessible &amp; Seamless Travel</td><td>Multi-modal connectivity, streamlined procedures, second-tier destination access</td><td>[Partial] Weak</td><td>Limited air access, no regional transport integration</td></tr>
+<tr><td><strong>D</strong> — Digital Tourism &amp; Diversification</td><td>Digital tools for MSMEs, data-driven marketing, product diversification (gastronomy, wellness, MICE, cruise)</td><td>[Partial] Emerging</td><td>No digital platform, limited data collection, no MICE strategy</td></tr>
+<tr><td><strong>S</strong> — Sustainable Tourism</td><td>Low-carbon operations, community-based tourism, international certification</td><td>[Partial] Partial</td><td>No certified sustainable destinations, no carbon monitoring</td></tr>
 </table>
 
 <div class="callout warn"><strong>ASEAN Compliance Score: 35/100.</strong> Bicol meets basic requirements in Resilience and Sustainability but has critical gaps in Digital Tourism, Accessible Travel, and Empowered People. Each gap represents a concrete action item addressed in Parts III and IV of this Guidebook.</div>
@@ -296,7 +289,7 @@ li { margin: 0.3rem 0; }
 </div>
 
 <div class="callout goal" style="margin-bottom:1.5rem;">
-  <strong>Key Question:</strong> How can Bicol grow from 4.4M to 8.5M annual visitors while increasing foreign share from 1.2% to 7%? The answer requires closing seven critical gaps identified in this section.
+ <strong>Key Question:</strong> How can Bicol grow from 4.4M to 8.5M annual visitors while increasing foreign share from 1.2% to 7%? The answer requires closing seven critical gaps identified in this section.
 </div><h1>3. Strategic Gap Analysis</h1>
 
 <h2>3.1 Seven Critical Gaps</h2>
@@ -498,7 +491,7 @@ li { margin: 0.3rem 0; }
 <li><strong>Text overlay hook:</strong> "This is in the Philippines?! " or "POV: You finally made it to Bicol"</li>
 <li><strong>Trending audio:</strong> Use a current viral sound; edit visuals to match the beat</li>
 <li><strong>Captions:</strong> Open captions for silent viewing (80%+ watch without sound)</li>
-<li><strong>Call to action in caption:</strong> "Tag someone you'd bring here ✈️ #BicolWOW #Philippines"</li>
+<li><strong>Call to action in caption:</strong> "Tag someone you'd bring here #BicolWOW #Philippines"</li>
 <li><strong>Location tag:</strong> Always tag the specific location (boosts local discovery)</li>
 <li><strong>Post at:</strong> 7-9 PM (highest Filipino Facebook engagement)</li>
 </ol>
@@ -670,11 +663,11 @@ li { margin: 0.3rem 0; }
 <p>A 5-star certification system for all tourism enterprises in the region:</p>
 <table>
 <tr><th>Level</th><th>Requirements</th><th>Validity</th></tr>
-<tr><td>⭐ Basic</td><td>Registered with tourism authority, basic safety standards, complaint mechanism</td><td>1 year</td></tr>
-<tr><td>⭐⭐ Standard</td><td>Basic + trained staff, basic English, cleanliness certification</td><td>2 years</td></tr>
-<tr><td>⭐⭐⭐ Excellent</td><td>Standard + sustainability practices, online booking, accessibility features</td><td>2 years</td></tr>
-<tr><td>⭐⭐⭐⭐ Premium</td><td>Excellent + international certifications, multi-language, carbon measurement</td><td>3 years</td></tr>
-<tr><td>⭐⭐⭐⭐⭐ World Class</td><td>Premium + ASEAN standards compliance, published sustainability report</td><td>3 years</td></tr>
+<tr><td>Level 1 — Basic</td><td>Registered with tourism authority, basic safety standards, complaint mechanism</td><td>1 year</td></tr>
+<tr><td>2-Level 2 — Standard</td><td>Basic + trained staff, basic English, cleanliness certification</td><td>2 years</td></tr>
+<tr><td>3-Level 3 — Excellent</td><td>Standard + sustainability practices, online booking, accessibility features</td><td>2 years</td></tr>
+<tr><td>4-Level 4 — Premium</td><td>Excellent + international certifications, multi-language, carbon measurement</td><td>3 years</td></tr>
+<tr><td>5-Level 5 — World Class</td><td>Premium + ASEAN standards compliance, published sustainability report</td><td>3 years</td></tr>
 </table>
 
 <h1>10. Crisis Management Plan</h1>
@@ -753,7 +746,7 @@ li { margin: 0.3rem 0; }
 
 
 <div class="callout info" style="margin-bottom:1.5rem;">
-  <strong>Investment Summary:</strong> PHP 159.7M over 3 years across 8 program categories. Every PHP 1 invested is projected to generate PHP 187 in economic return by 2028.
+ <strong>Investment Summary:</strong> PHP 159.7M over 3 years across 8 program categories. Every PHP 1 invested is projected to generate PHP 187 in economic return by 2028.
 </div><h1>12. 3-Year Budget Summary</h1>
 <table>
 <tr><th>Category</th><th>Year 1 (2026)</th><th>Year 2 (2027)</th><th>Year 3 (2028)</th><th>Total</th></tr>
@@ -848,23 +841,23 @@ li { margin: 0.3rem 0; }
 <p>Use this checklist to track Bicol's compliance with the ASEAN Tourism Strategic Plan 2026-2030.</p>
 <table>
 <tr><th>ASEAN Standard</th><th>Requirement</th><th>Bicol Status</th><th>Action Needed</th><th>Target Date</th></tr>
-<tr><td>R1</td><td>Tourism crisis communication plan exists and tested</td><td>❌ Not done</td><td>Draft crisis plan, conduct tabletop exercise</td><td>Q4 2026</td></tr>
-<tr><td>R2</td><td>Tourism insurance/assistance scheme for visitors</td><td>❌ Not done</td><td>Partner with insurance providers for tourist coverage</td><td>2027</td></tr>
-<tr><td>R3</td><td>Climate adaptation plan for tourism infrastructure</td><td>⚠️ Partial</td><td>Integrate climate risk into infrastructure planning</td><td>2027</td></tr>
-<tr><td>R4</td><td>Business continuity training for tourism MSMEs</td><td>❌ Not done</td><td>Develop BCP template and training program</td><td>2027</td></tr>
-<tr><td>R5</td><td>Health and safety protocols certified</td><td>⚠️ Partial</td><td>Adopt ASEAN sanitization standards</td><td>Q2 2027</td></tr>
-<tr><td>E1</td><td>Tourism skills training aligned with ASEAN MRA</td><td>❌ Not done</td><td>Map existing training to ASEAN competency standards</td><td>2027</td></tr>
-<tr><td>E2</td><td>Women and youth inclusion programs in tourism</td><td>⚠️ Partial</td><td>Set inclusion targets, create specific programs</td><td>2027</td></tr>
-<tr><td>E3</td><td>Accessibility for PWDs in tourism sites</td><td>❌ Not done</td><td>Audit top 20 sites, create accessibility upgrade plan</td><td>2028</td></tr>
-<tr><td>A1</td><td>Multi-modal transport connectivity plan</td><td>⚠️ Partial</td><td>Develop Bicol transport integration plan</td><td>2027</td></tr>
-<tr><td>A2</td><td>Second-tier destination access program</td><td>❌ Not done</td><td>Masbate and Catanduanes air/sea access program</td><td>2028</td></tr>
-<tr><td>A3</td><td>Cross-border tourism circuits (BIMP-EAGA)</td><td>❌ Not done</td><td>Explore Bicol-BIMP-EAGA tourism links</td><td>2028</td></tr>
-<tr><td>D1</td><td>Digital platform for tourism MSMEs</td><td>❌ Not done</td><td>Bicol Tourism Marketplace website + app</td><td>2027</td></tr>
-<tr><td>D2</td><td>Data-driven tourism planning system</td><td>⚠️ Partial</td><td>Implement unified data collection and dashboard</td><td>Q3 2026</td></tr>
-<tr><td>D3</td><td>Product diversification (gastronomy, wellness, MICE, cruise)</td><td>⚠️ Partial</td><td>Execute plans in Part III of this Guidebook</td><td>2026-2028</td></tr>
-<tr><td>S1</td><td>ASEAN Green Hotel standards adopted</td><td>❌ Not done</td><td>Recruit 20 hotels for certification</td><td>2027</td></tr>
-<tr><td>S2</td><td>Community-Based Tourism certified</td><td>⚠️ 5 informal</td><td>Certify 20 CBTs under ASEAN standards</td><td>2028</td></tr>
-<tr><td>S3</td><td>Carrying capacity plans for protected areas</td><td>❌ Not done</td><td>Complete for Caramoan, Calaguas, Mayon, Donsol</td><td>2027</td></tr>
+<tr><td>R1</td><td>Tourism crisis communication plan exists and tested</td><td>[No] Not done</td><td>Draft crisis plan, conduct tabletop exercise</td><td>Q4 2026</td></tr>
+<tr><td>R2</td><td>Tourism insurance/assistance scheme for visitors</td><td>[No] Not done</td><td>Partner with insurance providers for tourist coverage</td><td>2027</td></tr>
+<tr><td>R3</td><td>Climate adaptation plan for tourism infrastructure</td><td>[Partial] Partial</td><td>Integrate climate risk into infrastructure planning</td><td>2027</td></tr>
+<tr><td>R4</td><td>Business continuity training for tourism MSMEs</td><td>[No] Not done</td><td>Develop BCP template and training program</td><td>2027</td></tr>
+<tr><td>R5</td><td>Health and safety protocols certified</td><td>[Partial] Partial</td><td>Adopt ASEAN sanitization standards</td><td>Q2 2027</td></tr>
+<tr><td>E1</td><td>Tourism skills training aligned with ASEAN MRA</td><td>[No] Not done</td><td>Map existing training to ASEAN competency standards</td><td>2027</td></tr>
+<tr><td>E2</td><td>Women and youth inclusion programs in tourism</td><td>[Partial] Partial</td><td>Set inclusion targets, create specific programs</td><td>2027</td></tr>
+<tr><td>E3</td><td>Accessibility for PWDs in tourism sites</td><td>[No] Not done</td><td>Audit top 20 sites, create accessibility upgrade plan</td><td>2028</td></tr>
+<tr><td>A1</td><td>Multi-modal transport connectivity plan</td><td>[Partial] Partial</td><td>Develop Bicol transport integration plan</td><td>2027</td></tr>
+<tr><td>A2</td><td>Second-tier destination access program</td><td>[No] Not done</td><td>Masbate and Catanduanes air/sea access program</td><td>2028</td></tr>
+<tr><td>A3</td><td>Cross-border tourism circuits (BIMP-EAGA)</td><td>[No] Not done</td><td>Explore Bicol-BIMP-EAGA tourism links</td><td>2028</td></tr>
+<tr><td>D1</td><td>Digital platform for tourism MSMEs</td><td>[No] Not done</td><td>Bicol Tourism Marketplace website + app</td><td>2027</td></tr>
+<tr><td>D2</td><td>Data-driven tourism planning system</td><td>[Partial] Partial</td><td>Implement unified data collection and dashboard</td><td>Q3 2026</td></tr>
+<tr><td>D3</td><td>Product diversification (gastronomy, wellness, MICE, cruise)</td><td>[Partial] Partial</td><td>Execute plans in Part III of this Guidebook</td><td>2026-2028</td></tr>
+<tr><td>S1</td><td>ASEAN Green Hotel standards adopted</td><td>[No] Not done</td><td>Recruit 20 hotels for certification</td><td>2027</td></tr>
+<tr><td>S2</td><td>Community-Based Tourism certified</td><td>[Partial] 5 informal</td><td>Certify 20 CBTs under ASEAN standards</td><td>2028</td></tr>
+<tr><td>S3</td><td>Carrying capacity plans for protected areas</td><td>[No] Not done</td><td>Complete for Caramoan, Calaguas, Mayon, Donsol</td><td>2027</td></tr>
 </table>
 
 <h2>16.2 Glossary of Terms</h2>
