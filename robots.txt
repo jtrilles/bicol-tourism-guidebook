@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://jtrilles.github.io/bicol-tourism-guidebook/sitemap.xml
