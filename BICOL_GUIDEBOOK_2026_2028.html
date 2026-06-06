@@ -4,52 +4,575 @@
 <meta charset="UTF-8">
 <title>Bicol Region Tourism Guidebook 2026-2028</title>
 <style>
+/* Design Read: Government publication, institutional, authoritative */
+/* Audience: DOT leadership, LGUs, national agencies, tourism stakeholders */
+/* Variance: 2 (restrained) | Density: 5 (information-rich) */
+
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap');
-@page { size: A4; margin: 2.5cm 2.2cm 2.5cm 2.2cm; @bottom-center { content: "— " counter(page) " —"; font-size: 7.5pt; color: #888; font-family: 'Public Sans', sans-serif; } }
-body { font-family: 'Source Serif 4', Georgia, serif; color: #1B1B1B; line-height: 1.8; font-size: 10pt; }
-h1, h2, h3, h4 { font-family: 'Public Sans', sans-serif; font-weight: 600; color: #1B3A2D; }
-h1 { font-size: 17pt; margin: 2cm 0 0.4cm 0; padding-bottom: 5pt; border-bottom: 2.5px solid #1B3A2D; page-break-before: always; }
-h2 { font-size: 12pt; margin: 0.6cm 0 0.2cm 0; border-bottom: 1px solid #B8C6B8; }
-h3 { font-size: 10.5pt; font-weight: 500; margin: 0.35cm 0 0.15cm 0; color: #2D3D32; }
-p { margin: 0.15cm 0; text-align: justify; }
-table { width: 100%; border-collapse: collapse; margin: 0.3cm 0; font-family: 'Public Sans', sans-serif; font-size: 7.5pt; page-break-inside: avoid; }
-th { background: #1B3A2D; color: white; padding: 5pt 6pt; font-weight: 600; font-size: 7pt; letter-spacing: 0.5px; text-transform: uppercase; }
-td { padding: 3pt 6pt; border: 1px solid #D0D8D0; }
-tr:nth-child(even) { background: #F7FAF7; }
-.callout { background: #F5F7F5; border-left: 3px solid #1B3A2D; padding: 7pt 10pt; margin: 0.3cm 0; font-size: 8.5pt; page-break-inside: avoid; }
-.callout.info { border-left-color: #2C5F74; background: #F0F4F8; }
-.callout.warn { border-left-color: #8B6914; background: #FCF9F0; }
-.callout.goal { border-left-color: #8B2C2C; background: #FCF3F2; }
-.insight-box { background: #F0F5F0; border: 1px solid #C8D8C8; padding: 8pt 12pt; margin: 0.25cm 0; font-size: 8.5pt; page-break-inside: avoid; }
-.insight-box .label { font-family: 'Public Sans', sans-serif; font-size: 6.5pt; font-weight: 700; color: #1B3A2D; text-transform: uppercase; letter-spacing: 1px; }
-.kpi-row { display: flex; gap: 6pt; margin: 0.3cm 0; page-break-inside: avoid; }
-.kpi { flex: 1; text-align: center; padding: 8pt 3pt; background: #F7FAF7; border: 1px solid #D0D8D0; }
-.kpi .val { font-family: 'Public Sans', sans-serif; font-size: 14pt; font-weight: 700; color: #1B3A2D; }
-.kpi .lbl { font-family: 'Public Sans', sans-serif; font-size: 6pt; color: #555; text-transform: uppercase; }
-.cover { page: cover; page-break-after: always; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: #1B3A2D; color: white; padding: 3cm; }
-.cover h1 { font-size: 28pt; font-weight: 700; color: white; border: none; letter-spacing: 2px; }
-.cover .subtitle { font-family: 'Public Sans', sans-serif; font-size: 11pt; opacity: 0.85; }
-.cover .badge { border: 1px solid rgba(255,255,255,0.3); padding: 3pt 12pt; font-family: 'Public Sans', sans-serif; font-size: 7pt; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.8); }
-.cover .accent-line { width: 60px; height: 2px; background: rgba(255,255,255,0.4); margin: 0 auto 1cm auto; }
-.cover .target-num { font-family: 'Public Sans', sans-serif; font-size: 18pt; font-weight: 700; opacity: 0.9; }
-.cover .target-label { font-family: 'Public Sans', sans-serif; font-size: 6.5pt; opacity: 0.6; text-transform: uppercase; }
-.part { page-break-before: always; padding-top: 3.5cm; text-align: center; }
-.part .part-num { font-family: 'Public Sans', sans-serif; font-size: 42pt; font-weight: 700; color: #1B3A2D; }
-.part .part-title { font-family: 'Public Sans', sans-serif; font-size: 18pt; color: #1B3A2D; }
-.part .part-desc { max-width: 10cm; margin: 0 auto; font-size: 9pt; color: #555; }
-.comparison { display: flex; gap: 8pt; margin: 0.3cm 0; page-break-inside: avoid; }
-.comp-item { flex: 1; padding: 8pt 9pt; font-size: 8pt; }
-.comp-item.benchmark { background: #FCF3F2; border: 1px solid #E8C8C8; }
-.comp-item.bicol { background: #F0F5F0; border: 1px solid #C8D8C8; }
-.comp-item .label { font-family: 'Public Sans', sans-serif; font-size: 6.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-.chart-container { text-align: center; margin: 0.4cm 0; page-break-inside: avoid; }
-.doc-footer { text-align: center; margin-top: 1.5cm; border-top: 1px solid #D0D8D0; font-family: 'Public Sans', sans-serif; font-size: 7pt; color: #888; }
-ul, ol { margin: 0.1cm 0 0.1cm 1.5em; }
-li { margin: 0.08cm 0; }
-@media print { body { font-size: 9.5pt; } }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  color: #1B1B1B;
+  line-height: 1.75;
+  font-size: 16px;
+  background: #FAFAF8;
+}
+
+/* Main content area */
+.content {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+  background: #FFFFFF;
+}
+
+/* Skip to content link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: #1B3A2D;
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.skip-link:focus { top: 0; }
+
+/* Top navigation bar */
+.top-bar {
+  background: #1B3A2D;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 3px solid #2C5F4A;
+}
+
+.top-bar-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  min-height: 48px;
+}
+
+.top-bar .site-title {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+}
+
+.top-bar .site-title:hover {
+  opacity: 0.85;
+}
+
+.top-bar .back-link {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+}
+
+.top-bar .back-link:hover {
+  color: white;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1B3A2D;
+  margin: 2.5rem 0 0.75rem 0;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #1B3A2D;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+
+h1:first-of-type {
+  margin-top: 0.5rem;
+}
+
+h2 {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1B3A2D;
+  margin: 1.5rem 0 0.5rem 0;
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid #B8C6B8;
+}
+
+h3 {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #2D3D32;
+  margin: 1.2rem 0 0.4rem 0;
+}
+
+h4 {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+  margin: 1rem 0 0.3rem 0;
+}
+
+p {
+  margin: 0.5rem 0;
+  line-height: 1.75;
+  color: #2A2A2A;
+}
+
+/* Tables */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 1rem 0;
+  border: 1px solid #E0E4E0;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 14px;
+  min-width: 600px;
+}
+
+th {
+  background: #1B3A2D;
+  color: white;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 8px 12px;
+  border: 1px solid #E0E4E0;
+  vertical-align: top;
+}
+
+tr:nth-child(even) {
+  background: #F7FAF7;
+}
+
+tr:hover {
+  background: #EDF3ED;
+}
+
+/* Callouts */
+.callout {
+  background: #F5F7F5;
+  border-left: 4px solid #1B3A2D;
+  padding: 16px 20px;
+  margin: 1rem 0;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  border-radius: 0 4px 4px 0;
+}
+
+.callout.info {
+  border-left-color: #2C5F74;
+  background: #F0F4F8;
+}
+
+.callout.warn {
+  border-left-color: #8B6914;
+  background: #FCF9F0;
+}
+
+.callout.goal {
+  border-left-color: #8B2C2C;
+  background: #FCF3F2;
+}
+
+.callout strong {
+  color: #1B3A2D;
+}
+
+/* Insight boxes */
+.insight-box {
+  background: #EDF3ED;
+  border: 1px solid #C8D8C8;
+  padding: 16px 20px;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+
+.insight-box .label {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1B3A2D;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.insight-box p {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 14px;
+  margin: 0.3rem 0;
+  color: #2A2A2A;
+}
+
+/* KPI cards */
+.kpi-row {
+  display: flex;
+  gap: 12px;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.kpi {
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  padding: 16px 12px;
+  background: #F5F7F5;
+  border: 1px solid #D0D8D0;
+  border-radius: 4px;
+}
+
+.kpi .val {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1B3A2D;
+  line-height: 1.2;
+}
+
+.kpi .lbl {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 11px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+/* Comparison panels */
+.comparison {
+  display: flex;
+  gap: 16px;
+  margin: 1rem 0;
+}
+
+.comp-item {
+  flex: 1;
+  padding: 16px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.comp-item.benchmark {
+  background: #FCF3F2;
+  border: 1px solid #E8C8C8;
+}
+
+.comp-item.bicol {
+  background: #F0F5F0;
+  border: 1px solid #C8D8C8;
+}
+
+.comp-item .label {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.comp-item.benchmark .label { color: #8B2C2C; }
+.comp-item.bicol .label { color: #1B3A2D; }
+
+/* SVG Charts */
+.chart-container {
+  text-align: center;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #F7FAF7;
+  border: 1px solid #E0E4E0;
+  border-radius: 4px;
+}
+
+.chart-container svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.chart-title {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 13px;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Lists */
+ul, ol {
+  margin: 0.5rem 0 0.5rem 1.8rem;
+}
+
+li {
+  margin: 0.3rem 0;
+  line-height: 1.6;
+}
+
+/* Footer */
+.doc-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #E0E4E0;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 13px;
+  color: #888;
+  line-height: 1.6;
+}
+
+/* Data highlight */
+.data-highlight {
+  background: #1B3A2D;
+  color: white;
+  padding: 20px 24px;
+  margin: 1rem 0;
+  border-radius: 4px;
+  font-family: 'Public Sans', sans-serif;
+}
+
+.data-highlight .num-row {
+  font-size: 28px;
+  font-weight: 700;
+  color: #C4974A;
+}
+
+.data-highlight .label-row {
+  font-size: 12px;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Part dividers (for web, just a visual separator) */
+.part {
+  margin: 3rem 0 1.5rem;
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 2px solid #E0E4E0;
+  border-bottom: 2px solid #E0E4E0;
+  background: #F5F7F5;
+  border-radius: 4px;
+}
+
+.part .part-num {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #1B3A2D;
+  letter-spacing: 3px;
+}
+
+.part .part-title {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1B3A2D;
+  margin: 0.5rem 0 0.3rem;
+}
+
+.part .part-desc {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Cover - repurposed for web */
+.cover {
+  margin: 0;
+  padding: 4rem 2rem;
+  background: #1B3A2D;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.cover h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  border: none;
+  letter-spacing: 1px;
+  margin: 1rem 0;
+}
+
+.cover .subtitle {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 18px;
+  opacity: 0.85;
+  margin: 0.5rem 0;
+}
+
+.cover .badge {
+  display: inline-block;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 6px 16px;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+}
+
+.cover .accent-line {
+  width: 60px;
+  height: 2px;
+  background: rgba(255,255,255,0.3);
+  margin: 1rem auto;
+}
+
+.cover .meta {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 14px;
+  opacity: 0.6;
+  margin-top: 1.5rem;
+}
+
+.cover .target-row {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cover .target-num {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.cover .target-label {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 11px;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* TOC */
+.toc {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #F5F7F5;
+  border-radius: 4px;
+  border: 1px solid #E0E4E0;
+}
+
+.toc h1 {
+  margin-top: 0;
+  font-size: 22px;
+  border-bottom-color: #1B3A2D;
+}
+
+.toc-item {
+  display: flex;
+  padding: 6px 0;
+  border-bottom: 1px dotted #D0D8D0;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 14px;
+}
+
+.toc-item .num {
+  font-weight: 600;
+  color: #1B3A2D;
+  min-width: 2rem;
+}
+
+.toc-part {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #1B3A2D;
+  padding: 10px 0 4px;
+  border-bottom: 2px solid #1B3A2D;
+  margin-top: 8px;
+}
+
+/* Small text */
+.small { font-size: 13px; color: #888; }
+
+/* Status dots */
+.status-dot {
+  display: inline-block;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+.status-dot.green { background: #27AE60; }
+.status-dot.yellow { background: #C4974A; }
+.status-dot.red { background: #C0392B; }
+
+/* Page breaks removed - this is web only */
+
+/* Responsive */
+@media (max-width: 700px) {
+  .content { padding: 1.5rem 1rem; }
+  .top-bar-inner { padding: 0 1rem; }
+  .cover { padding: 2rem 1rem; }
+  .cover h1 { font-size: 24px; }
+  .kpi-row { flex-direction: column; }
+  .kpi { min-width: auto; }
+  .comparison { flex-direction: column; }
+  .part .part-num { font-size: 36px; }
+  .part .part-title { font-size: 20px; }
+  h1 { font-size: 24px; }
+  h2 { font-size: 18px; }
+  h3 { font-size: 15px; }
+  .toc-item { font-size: 13px; }
+}
+
+/* Print support - minimal, mostly web */
+@media print {
+  .top-bar { display: none; }
+  .content { max-width: none; padding: 0; }
+  body { font-size: 12pt; }
+}
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <a href="/" class="site-title">Bicol Region Tourism — Strategic Guidebook</a>
+    <a href="https://jtrilles.github.io/bicol-tourism-guidebook/" class="back-link">Back to Home</a>
+  </div>
+</div>
+<div id="main-content" class="content">
+
 
 <!-- COVER -->
 <div class="cover">
@@ -1045,5 +1568,7 @@ li { margin: 0.08cm 0; }
 </p>
 </div>
 
+
+</div>
 </body>
 </html>
