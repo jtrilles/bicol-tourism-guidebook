@@ -5,578 +5,82 @@
 <title>Bicol Region Tourism Guidebook 2026-2028</title>
 <style>
 /* Design Read: Government publication, institutional, authoritative */
-/* Audience: DOT leadership, LGUs, national agencies, tourism stakeholders */
-/* Variance: 2 (restrained) | Density: 5 (information-rich) */
-
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap');
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-  color: #1B1B1B;
-  line-height: 1.75;
-  font-size: 16px;
-  background: #FAFAF8;
-}
-
-/* Main content area */
-.content {
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 3rem 2rem 4rem;
-  background: #FFFFFF;
-}
-
-/* Skip to content link for accessibility */
-.skip-link {
-  position: absolute;
-  top: -100px;
-  left: 0;
-  background: #1B3A2D;
-  color: white;
-  padding: 8px 16px;
-  z-index: 100;
-  font-family: 'Public Sans', sans-serif;
-  font-size: 14px;
-  text-decoration: none;
-}
-
+body { font-family: 'Source Serif 4', Georgia, serif; color: #1B1B1B; line-height: 1.75; font-size: 16px; background: #FAFAF8; }
+.content { max-width: 880px; margin: 0 auto; padding: 3rem 2rem 4rem; background: #FFFFFF; }
+.skip-link { position: absolute; top: -100px; left: 0; background: #1B3A2D; color: white; padding: 8px 16px; z-index: 100; font-family: 'Public Sans', sans-serif; font-size: 14px; text-decoration: none; }
 .skip-link:focus { top: 0; }
-
-/* Top navigation bar */
-.top-bar {
-  background: #1B3A2D;
-  padding: 0;
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  border-bottom: 3px solid #2C5F4A;
-}
-
-.top-bar-inner {
-  max-width: 880px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  min-height: 48px;
-}
-
-.top-bar .site-title {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: white;
-  text-decoration: none;
-  letter-spacing: 0.3px;
-}
-
-.top-bar .site-title:hover {
-  opacity: 0.85;
-}
-
-.top-bar .back-link {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 13px;
-  color: rgba(255,255,255,0.7);
-  text-decoration: none;
-}
-
-.top-bar .back-link:hover {
-  color: white;
-}
-
-/* Typography */
-h1 {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  color: #1B3A2D;
-  margin: 2.5rem 0 0.75rem 0;
-  padding-bottom: 8px;
-  border-bottom: 3px solid #1B3A2D;
-  line-height: 1.2;
-  letter-spacing: -0.3px;
-}
-
-h1:first-of-type {
-  margin-top: 0.5rem;
-}
-
-h2 {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  color: #1B3A2D;
-  margin: 1.5rem 0 0.5rem 0;
-  padding-bottom: 4px;
-  border-bottom: 1.5px solid #B8C6B8;
-}
-
-h3 {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  color: #2D3D32;
-  margin: 1.2rem 0 0.4rem 0;
-}
-
-h4 {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  color: #444;
-  margin: 1rem 0 0.3rem 0;
-}
-
-p {
-  margin: 0.5rem 0;
-  line-height: 1.75;
-  color: #2A2A2A;
-}
-
-/* Tables */
-.table-wrapper {
-  overflow-x: auto;
-  margin: 1rem 0;
-  border: 1px solid #E0E4E0;
-  border-radius: 4px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-family: 'Public Sans', sans-serif;
-  font-size: 14px;
-  min-width: 600px;
-}
-
-th {
-  background: #1B3A2D;
-  color: white;
-  padding: 10px 12px;
-  text-align: left;
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-td {
-  padding: 8px 12px;
-  border: 1px solid #E0E4E0;
-  vertical-align: top;
-}
-
-tr:nth-child(even) {
-  background: #F7FAF7;
-}
-
-tr:hover {
-  background: #EDF3ED;
-}
-
-/* Callouts */
-.callout {
-  background: #F5F7F5;
-  border-left: 4px solid #1B3A2D;
-  padding: 16px 20px;
-  margin: 1rem 0;
-  font-family: 'Public Sans', sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
-  border-radius: 0 4px 4px 0;
-}
-
-.callout.info {
-  border-left-color: #2C5F74;
-  background: #F0F4F8;
-}
-
-.callout.warn {
-  border-left-color: #8B6914;
-  background: #FCF9F0;
-}
-
-.callout.goal {
-  border-left-color: #8B2C2C;
-  background: #FCF3F2;
-}
-
-.callout strong {
-  color: #1B3A2D;
-}
-
-/* Insight boxes */
-.insight-box {
-  background: #EDF3ED;
-  border: 1px solid #C8D8C8;
-  padding: 16px 20px;
-  margin: 1rem 0;
-  border-radius: 4px;
-}
-
-.insight-box .label {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  color: #1B3A2D;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 6px;
-}
-
-.insight-box p {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 14px;
-  margin: 0.3rem 0;
-  color: #2A2A2A;
-}
-
-/* KPI cards */
-.kpi-row {
-  display: flex;
-  gap: 12px;
-  margin: 1rem 0;
-  flex-wrap: wrap;
-}
-
-.kpi {
-  flex: 1;
-  min-width: 150px;
-  text-align: center;
-  padding: 16px 12px;
-  background: #F5F7F5;
-  border: 1px solid #D0D8D0;
-  border-radius: 4px;
-}
-
-.kpi .val {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: #1B3A2D;
-  line-height: 1.2;
-}
-
-.kpi .lbl {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 11px;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-top: 4px;
-}
-
-/* Comparison panels */
-.comparison {
-  display: flex;
-  gap: 16px;
-  margin: 1rem 0;
-}
-
-.comp-item {
-  flex: 1;
-  padding: 16px 20px;
-  border-radius: 4px;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.comp-item.benchmark {
-  background: #FCF3F2;
-  border: 1px solid #E8C8C8;
-}
-
-.comp-item.bicol {
-  background: #F0F5F0;
-  border: 1px solid #C8D8C8;
-}
-
-.comp-item .label {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 8px;
-}
-
-.comp-item.benchmark .label { color: #8B2C2C; }
-.comp-item.bicol .label { color: #1B3A2D; }
-
-/* SVG Charts */
-.chart-container {
-  text-align: center;
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background: #F7FAF7;
-  border: 1px solid #E0E4E0;
-  border-radius: 4px;
-}
-
-.chart-container svg {
-  max-width: 100%;
-  height: auto;
-}
-
-.chart-title {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 13px;
-  color: #666;
-  margin-top: 8px;
-}
-
-/* Lists */
-ul, ol {
-  margin: 0.5rem 0 0.5rem 1.8rem;
-}
-
-li {
-  margin: 0.3rem 0;
-  line-height: 1.6;
-}
-
-/* Footer */
-.doc-footer {
-  text-align: center;
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 2px solid #E0E4E0;
-  font-family: 'Public Sans', sans-serif;
-  font-size: 13px;
-  color: #888;
-  line-height: 1.6;
-}
-
-/* Data highlight */
-.data-highlight {
-  background: #1B3A2D;
-  color: white;
-  padding: 20px 24px;
-  margin: 1rem 0;
-  border-radius: 4px;
-  font-family: 'Public Sans', sans-serif;
-}
-
-.data-highlight .num-row {
-  font-size: 28px;
-  font-weight: 700;
-  color: #C4974A;
-}
-
-.data-highlight .label-row {
-  font-size: 12px;
-  opacity: 0.8;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Part dividers (for web, just a visual separator) */
-.part {
-  margin: 3rem 0 1.5rem;
-  padding: 2rem 0;
-  text-align: center;
-  border-top: 2px solid #E0E4E0;
-  border-bottom: 2px solid #E0E4E0;
-  background: #F5F7F5;
-  border-radius: 4px;
-}
-
-.part .part-num {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 48px;
-  font-weight: 700;
-  color: #1B3A2D;
-  letter-spacing: 3px;
-}
-
-.part .part-title {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: #1B3A2D;
-  margin: 0.5rem 0 0.3rem;
-}
-
-.part .part-desc {
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: 15px;
-  color: #555;
-  line-height: 1.5;
-}
-
-/* Cover - repurposed for web */
-.cover {
-  margin: 0;
-  padding: 4rem 2rem;
-  background: #1B3A2D;
-  color: white;
-  text-align: center;
-  border-radius: 4px;
-}
-
-.cover h1 {
-  font-size: 32px;
-  font-weight: 700;
-  color: white;
-  border: none;
-  letter-spacing: 1px;
-  margin: 1rem 0;
-}
-
-.cover .subtitle {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 18px;
-  opacity: 0.85;
-  margin: 0.5rem 0;
-}
-
-.cover .badge {
-  display: inline-block;
-  border: 1px solid rgba(255,255,255,0.3);
-  padding: 6px 16px;
-  font-family: 'Public Sans', sans-serif;
-  font-size: 13px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
-}
-
-.cover .accent-line {
-  width: 60px;
-  height: 2px;
-  background: rgba(255,255,255,0.3);
-  margin: 1rem auto;
-}
-
-.cover .meta {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 14px;
-  opacity: 0.6;
-  margin-top: 1.5rem;
-}
-
-.cover .target-row {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  margin-top: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.cover .target-num {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  opacity: 0.9;
-}
-
-.cover .target-label {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 11px;
-  opacity: 0.6;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* TOC */
-.toc {
-  margin: 2rem 0;
-  padding: 1.5rem;
-  background: #F5F7F5;
-  border-radius: 4px;
-  border: 1px solid #E0E4E0;
-}
-
-.toc h1 {
-  margin-top: 0;
-  font-size: 22px;
-  border-bottom-color: #1B3A2D;
-}
-
-.toc-item {
-  display: flex;
-  padding: 6px 0;
-  border-bottom: 1px dotted #D0D8D0;
-  font-family: 'Public Sans', sans-serif;
-  font-size: 14px;
-}
-
-.toc-item .num {
-  font-weight: 600;
-  color: #1B3A2D;
-  min-width: 2rem;
-}
-
-.toc-part {
-  font-family: 'Public Sans', sans-serif;
-  font-weight: 600;
-  font-size: 15px;
-  color: #1B3A2D;
-  padding: 10px 0 4px;
-  border-bottom: 2px solid #1B3A2D;
-  margin-top: 8px;
-}
-
-/* Small text */
-.small { font-size: 13px; color: #888; }
-
-/* Status dots */
-.status-dot {
-  display: inline-block;
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  margin-right: 4px;
-}
+.top-bar { background: #1B3A2D; padding: 0; position: sticky; top: 0; z-index: 50; border-bottom: 3px solid #2C5F4A; }
+.top-bar-inner { max-width: 880px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; min-height: 48px; }
+.top-bar .site-title { font-family: 'Public Sans', sans-serif; font-size: 14px; font-weight: 600; color: white; text-decoration: none; }
+.top-bar .back-link { font-family: 'Public Sans', sans-serif; font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; }
+h1 { font-family: 'Public Sans', sans-serif; font-size: 28px; font-weight: 700; color: #1B3A2D; margin: 2.5rem 0 0.75rem; padding-bottom: 8px; border-bottom: 3px solid #1B3A2D; }
+h1:first-of-type { margin-top: 0.5rem; }
+h2 { font-family: 'Public Sans', sans-serif; font-size: 20px; font-weight: 600; color: #1B3A2D; margin: 1.5rem 0 0.5rem; padding-bottom: 4px; border-bottom: 1.5px solid #B8C6B8; }
+h3 { font-family: 'Public Sans', sans-serif; font-size: 17px; font-weight: 600; color: #2D3D32; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.5rem 0; line-height: 1.75; color: #2A2A2A; }
+.table-wrapper { overflow-x: auto; margin: 1rem 0; border: 1px solid #E0E4E0; border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-family: 'Public Sans', sans-serif; font-size: 14px; min-width: 600px; }
+th { background: #1B3A2D; color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase; }
+td { padding: 8px 12px; border: 1px solid #E0E4E0; vertical-align: top; }
+tr:nth-child(even) { background: #F7FAF7; }
+.callout { background: #F5F7F5; border-left: 4px solid #1B3A2D; padding: 16px 20px; margin: 1rem 0; font-family: 'Public Sans', sans-serif; font-size: 14px; line-height: 1.6; border-radius: 0 4px 4px 0; }
+.callout.info { border-left-color: #2C5F74; background: #F0F4F8; }
+.callout.warn { border-left-color: #8B6914; background: #FCF9F0; }
+.callout.goal { border-left-color: #8B2C2C; background: #FCF3F2; }
+.insight-box { background: #EDF3ED; border: 1px solid #C8D8C8; padding: 16px 20px; margin: 1rem 0; border-radius: 4px; }
+.insight-box .label { font-family: 'Public Sans', sans-serif; font-size: 12px; font-weight: 700; color: #1B3A2D; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.insight-box p { font-family: 'Public Sans', sans-serif; font-size: 14px; color: #2A2A2A; }
+.kpi-row { display: flex; gap: 12px; margin: 1rem 0; flex-wrap: wrap; }
+.kpi { flex: 1; min-width: 150px; text-align: center; padding: 16px 12px; background: #F5F7F5; border: 1px solid #D0D8D0; border-radius: 4px; }
+.kpi .val { font-family: 'Public Sans', sans-serif; font-size: 24px; font-weight: 700; color: #1B3A2D; }
+.kpi .lbl { font-family: 'Public Sans', sans-serif; font-size: 11px; color: #666; text-transform: uppercase; }
+.comparison { display: flex; gap: 16px; margin: 1rem 0; }
+.comp-item { flex: 1; padding: 16px 20px; border-radius: 4px; font-size: 14px; }
+.comp-item.benchmark { background: #FCF3F2; border: 1px solid #E8C8C8; }
+.comp-item.bicol { background: #F0F5F0; border: 1px solid #C8D8C8; }
+.comp-item .label { font-family: 'Public Sans', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+.chart-container { text-align: center; margin: 1.5rem 0; padding: 1rem; background: #F7FAF7; border: 1px solid #E0E4E0; border-radius: 4px; }
+.chart-container svg { max-width: 100%; height: auto; }
+.chart-title { font-family: 'Public Sans', sans-serif; font-size: 13px; color: #666; margin-top: 8px; }
+.part { margin: 3rem 0 1.5rem; padding: 2rem 0; text-align: center; border-top: 2px solid #E0E4E0; border-bottom: 2px solid #E0E4E0; background: #F5F7F5; border-radius: 4px; }
+.part .part-num { font-family: 'Public Sans', sans-serif; font-size: 48px; font-weight: 700; color: #1B3A2D; }
+.part .part-title { font-family: 'Public Sans', sans-serif; font-size: 24px; font-weight: 700; color: #1B3A2D; margin: 0.5rem 0 0.3rem; }
+.part .part-desc { max-width: 600px; margin: 0 auto; font-size: 15px; color: #555; }
+.cover { margin: 0; padding: 4rem 2rem; background: #1B3A2D; color: white; text-align: center; border-radius: 4px; }
+.cover h1 { font-size: 32px; font-weight: 700; color: white; border: none; margin: 1rem 0; font-size: 32px; }
+.cover .subtitle { font-family: 'Public Sans', sans-serif; font-size: 18px; opacity: 0.85; }
+.cover .badge { display: inline-block; border: 1px solid rgba(255,255,255,0.3); padding: 6px 16px; font-family: 'Public Sans', sans-serif; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+.cover .meta { font-family: 'Public Sans', sans-serif; font-size: 14px; opacity: 0.6; margin-top: 1.5rem; }
+.cover .target-row { display: flex; gap: 1.5rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap; }
+.cover .target-num { font-family: 'Public Sans', sans-serif; font-size: 24px; font-weight: 700; opacity: 0.9; color: #C4974A; }
+.cover .target-label { font-family: 'Public Sans', sans-serif; font-size: 11px; opacity: 0.6; text-transform: uppercase; }
+.toc { margin: 2rem 0; padding: 1.5rem; background: #F5F7F5; border-radius: 4px; border: 1px solid #E0E4E0; }
+.toc h1 { margin-top: 0; font-size: 22px; }
+.toc-item { display: flex; padding: 6px 0; border-bottom: 1px dotted #D0D8D0; font-family: 'Public Sans', sans-serif; font-size: 14px; }
+.toc-item .num { font-weight: 600; color: #1B3A2D; min-width: 2rem; }
+.toc-part { font-family: 'Public Sans', sans-serif; font-weight: 600; font-size: 15px; color: #1B3A2D; padding: 10px 0 4px; border-bottom: 2px solid #1B3A2D; }
+.doc-footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 2px solid #E0E4E0; font-family: 'Public Sans', sans-serif; font-size: 13px; color: #888; }
+.status-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; }
 .status-dot.green { background: #27AE60; }
 .status-dot.yellow { background: #C4974A; }
 .status-dot.red { background: #C0392B; }
-
-/* Page breaks removed - this is web only */
-
-/* Responsive */
-@media (max-width: 700px) {
-  .content { padding: 1.5rem 1rem; }
-  .top-bar-inner { padding: 0 1rem; }
-  .cover { padding: 2rem 1rem; }
-  .cover h1 { font-size: 24px; }
-  .kpi-row { flex-direction: column; }
-  .kpi { min-width: auto; }
-  .comparison { flex-direction: column; }
-  .part .part-num { font-size: 36px; }
-  .part .part-title { font-size: 20px; }
-  h1 { font-size: 24px; }
-  h2 { font-size: 18px; }
-  h3 { font-size: 15px; }
-  .toc-item { font-size: 13px; }
-}
-
-/* Print support - minimal, mostly web */
-@media print {
-  .top-bar { display: none; }
-  .content { max-width: none; padding: 0; }
-  body { font-size: 12pt; }
-}
+ul, ol { margin: 0.5rem 0 0.5rem 1.8rem; }
+li { margin: 0.3rem 0; }
+@media (max-width: 700px) { .content { padding: 1.5rem 1rem; } .cover { padding: 2rem 1rem; } .cover h1 { font-size: 24px; } .kpi-row { flex-direction: column; } .comparison { flex-direction: column; } h1 { font-size: 24px; } .toc-item { font-size: 13px; } }
+@media print { .top-bar { display: none; } .content { max-width: none; padding: 0; } }
 </style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
-<div class="top-bar">
-  <div class="top-bar-inner">
-    <a href="/" class="site-title">Bicol Region Tourism — Strategic Guidebook</a>
-    <a href="https://jtrilles.github.io/bicol-tourism-guidebook/" class="back-link">Back to Home</a>
-  </div>
-</div>
+<div class="top-bar"><div class="top-bar-inner"><a href="/" class="site-title">Bicol Region Tourism — Strategic Guidebook</a><a href="https://jtrilles.github.io/bicol-tourism-guidebook/" class="back-link">Back to Home</a></div></div>
 <div id="main-content" class="content">
 
 
 <!-- COVER -->
 <div class="cover">
-  <span class="seal"></span>
+  
   <h1>BICOL REGION TOURISM<br>STRATEGIC GUIDEBOOK</h1>
   <div class="subtitle">Comprehensive Destination Management &amp; Marketing Plan 2026–2028</div>
   <div class="meta">
@@ -628,7 +132,7 @@ li {
 <tr><td>Sorsogon</td><td>419,634</td><td>9.5%</td><td>Donsol Whale Sharks</td><td>+7.1%</td></tr>
 <tr><td>Masbate</td><td>211,771</td><td>4.8%</td><td>Ticao Island, Diving</td><td>+5.3%</td></tr>
 <tr><td>Catanduanes</td><td>145,377</td><td>3.3%</td><td>Surfing, Hills, Churches</td><td>+18.6%</td></tr>
-<tr style="font-weight:bold; background:#e8f5e9;"><td>Total</td><td>4,435,883</td><td>100%</td><td>—</td><td>+11.2%</td></tr>
+<tr style="font-weight:bold; background:#e8f5e9;"><td>Total</td><td>4,435,883</td><td>100%</td><td></td><td>+11.2%</td></tr>
 </table>
 
 <h2>1.3 Day Tourist &amp; Overnight Breakdown</h2>
@@ -669,49 +173,29 @@ li {
 <div class="callout"><strong>Benchmark:</strong> Bicol's foreign tourist share (1.2%) is dramatically below the Philippines average (~8%) and far behind regional peers like Palawan (~15%) and Cebu (~12%). This is Bicol's single largest growth opportunity — even reaching 6% foreign share would mean ~270,000 international visitors annually.</div>
 
 
-<h2>1.3 Detailed Provincial Performance Analysis</h2>
-
-<p>Beyond aggregate figures, understanding each province's distinct tourism profile is essential for targeted strategy. The following analysis breaks down performance metrics by province, revealing stark disparities in tourism revenue generation, visitor spending patterns, and overnight stays that inform the province-specific development plans in Part III of this Guidebook.</p>
-
-<div class="insight-box"><div class="label">Revenue Disparity — The PHP 320 vs PHP 146 Gap</div>
-<p>Albay generates PHP 320 per visitor while Sorsogon generates only PHP 146. This 2.2x gap is not explained by product quality — both have world-class assets (Mayon vs. whale sharks). The gap is explained entirely by overnight ratio (Albay 41%, Sorsogon 22%) and accommodation availability. Visitors to Sorsogon literally have nowhere to stay, so they leave — taking their revenue with them. This is the single most addressable revenue gap in the entire region. Increasing Sorsogon's overnight ratio from 22% to 35% would add an estimated PHP 180M in annual revenue.</p>
-</div>
-
-<h2>1.4 Seasonality Deep Dive</h2>
-<p>Bicol's seasonality pattern is one of the most pronounced in Philippine tourism. The 3.9:1 peak-to-low ratio means that during August (low season), hotels operate at 40% capacity while during May (peak), they operate at 95%. This feast-or-famine cycle has real economic consequences: businesses struggle to retain staff during low season, investment in quality is discouraged by the short revenue window, and visitors during peak suffer from overcrowding and reduced service quality.</p>
-
-<p>The seasonality pattern is driven by three factors: (1) <strong>Weather</strong> — the rainy season (June-October) coincides with typhoon risk, deterring leisure travel; (2) <strong>School Calendar</strong> — the Philippine summer break (March-May) creates a concentrated travel window; (3) <strong>Festival Calendar</strong> — Peñafrancia (September) creates a second peak that buffers the late-year shoulder season.</p>
-
-<div class="insight-box"><div class="label">Seasonality — A Solvable Problem</div>
-<p>The good news: seasonality is not a fixed geographic constraint but a product of market behavior that can be influenced through targeted marketing, product development, and pricing strategies. Thailand has similar monsoon patterns but achieves year-round tourism through product diversification (wellness, shopping, MICE). Queenstown, New Zealand has more extreme weather than Bicol but maintains year-round demand through adventure products. Bicol's off-peak strategy must focus on: indoor cultural experiences, MICE and events, wellness tourism, and diaspora travel — all of which are less weather-dependent than beach tourism.</p>
-</div>
-
 <div class="chart-container">
 <svg width="480" height="200" viewBox="0 0 480 200">
   <rect width="480" height="200" fill="#F7FAF7" rx="3"/>
-  <text x="240" y="16" text-anchor="middle" font-family="Public Sans" font-size="9" font-weight="600" fill="#1B3A2D">Bicol Tourist Arrivals (Millions) — Historical and Target</text>
+  <text x="240" y="16" text-anchor="middle" font-family="Public Sans" font-size="9" font-weight="600" fill="#1B3A2D">Bicol Tourism Growth Trajectory (Arrivals in Millions)</text>
   <line x1="50" y1="30" x2="50" y2="175" stroke="#D0D8D0"/>
   <line x1="50" y1="175" x2="460" y2="175" stroke="#D0D8D0"/>
-  <!-- Historical bars -->
   <rect x="62" y="100" width="40" height="75" fill="#1B3A2D" rx="2"><title>2019: 3.96M</title></rect>
   <rect x="110" y="168" width="40" height="7" fill="#8B2C2C" rx="2"><title>2020: 0.90M</title></rect>
   <rect x="158" y="172" width="40" height="3" fill="#8B2C2C" rx="2"><title>2021: 0.43M</title></rect>
   <rect x="206" y="138" width="40" height="37" fill="#8B6914" rx="2"><title>2022: 1.87M</title></rect>
   <rect x="254" y="85" width="40" height="90" fill="#8B6914" rx="2"><title>2023: 3.56M</title></rect>
   <rect x="302" y="65" width="40" height="110" fill="#1B3A2D" rx="2"><title>2024: 4.44M</title></rect>
-  <!-- Target bars -->
-  <rect x="350" y="40" width="40" height="135" fill="#1B3A2D" rx="2" opacity="0.5"><title>2026 Target: 5.45M</title></rect>
-  <rect x="398" y="10" width="40" height="165" fill="#1B3A2D" rx="2" opacity="0.3"><title>2028 Target: 8.50M</title></rect>
+  <rect x="350" y="40" width="40" height="135" fill="#1B3A2D" opacity="0.5" rx="2"><title>2026T: 5.45M</title></rect>
+  <rect x="398" y="10" width="40" height="165" fill="#1B3A2D" opacity="0.3" rx="2"><title>2028T: 8.50M</title></rect>
   <line x1="50" y1="10" x2="460" y2="10" stroke="#C0392B" stroke-width="1" stroke-dasharray="3,3"/>
-  <text x="350" y="6" font-family="Public Sans" font-size="7" fill="#C0392B">8.5M Target</text>
-  <text x="82" y="188" text-anchor="middle" font-family="Public Sans" font-size="6.5" fill="#555">2019</text>
-  <text x="130" y="188" text-anchor="middle" font-family="Public Sans" font-size="6.5" fill="#555">2020</text>
-  <text x="178" y="188" text-anchor="middle" font-family="Public Sans" font-size="6.5" fill="#555">2021</text>
-  <text x="226" y="188" text-anchor="middle" font-family="Public Sans" font-size="6.5" fill="#555">2022</text>
-  <text x="274" y="188" text-anchor="middle" font-family="Public Sans" font-size="6.5" fill="#555">2023</text>
-  <text x="322" y="188" text-anchor="middle" font-family="Public Sans" font-size="6.5" fill="#555">2024</text>
-  <text x="370" y="188" text-anchor="middle" font-family="Public Sans" font-size="6.5" fill="#555">2026T</text>
-  <text x="418" y="188" text-anchor="middle" font-family="Public Sans" font-size="6.5" fill="#1B3A2D" font-weight="600">2028T</text>
+  <text x="82" y="188" text-anchor="middle" font-size="6.5" fill="#555">2019</text>
+  <text x="130" y="188" text-anchor="middle" font-size="6.5" fill="#555">2020</text>
+  <text x="178" y="188" text-anchor="middle" font-size="6.5" fill="#555">2021</text>
+  <text x="226" y="188" text-anchor="middle" font-size="6.5" fill="#555">2022</text>
+  <text x="274" y="188" text-anchor="middle" font-size="6.5" fill="#555">2023</text>
+  <text x="322" y="188" text-anchor="middle" font-size="6.5" fill="#555">2024</text>
+  <text x="370" y="188" text-anchor="middle" font-size="6.5" fill="#555">2026T</text>
+  <text x="418" y="188" text-anchor="middle" font-size="6.5" fill="#1B3A2D" font-weight="600">2028T</text>
 </svg>
 <div class="chart-title">Figure 2.1: Bicol Tourism Growth Trajectory — 2019 to 2028 Target</div>
 </div>
@@ -722,11 +206,11 @@ li {
 
 <table>
 <tr><th>Focus Area</th><th>Description</th><th>Bicol Status</th><th>Gap</th></tr>
-<tr><td><strong>R</strong> — Resilient Tourism</td><td>Build systems that withstand shocks — natural disasters, health crises, economic volatility</td><td> [Partial]  Partial</td><td>No formal crisis management framework or tourism insurance scheme</td></tr>
-<tr><td><strong>E</strong> — Empowered People</td><td>Workforce development, mutual recognition of skills, inclusive employment</td><td> [Partial]  Developing</td><td>No accredited tourism training center in 4 of 6 provinces</td></tr>
-<tr><td><strong>A</strong> — Accessible &amp; Seamless Travel</td><td>Multi-modal connectivity, streamlined procedures, second-tier destination access</td><td> [Partial]  Weak</td><td>Limited air access, no regional transport integration</td></tr>
-<tr><td><strong>D</strong> — Digital Tourism &amp; Diversification</td><td>Digital tools for MSMEs, data-driven marketing, product diversification (gastronomy, wellness, MICE, cruise)</td><td> [Partial]  Emerging</td><td>No digital platform, limited data collection, no MICE strategy</td></tr>
-<tr><td><strong>S</strong> — Sustainable Tourism</td><td>Low-carbon operations, community-based tourism, international certification</td><td> [Partial]  Partial</td><td>No certified sustainable destinations, no carbon monitoring</td></tr>
+<tr><td><strong>R</strong> — Resilient Tourism</td><td>Build systems that withstand shocks — natural disasters, health crises, economic volatility</td><td>⚠️ Partial</td><td>No formal crisis management framework or tourism insurance scheme</td></tr>
+<tr><td><strong>E</strong> — Empowered People</td><td>Workforce development, mutual recognition of skills, inclusive employment</td><td>⚠️ Developing</td><td>No accredited tourism training center in 4 of 6 provinces</td></tr>
+<tr><td><strong>A</strong> — Accessible &amp; Seamless Travel</td><td>Multi-modal connectivity, streamlined procedures, second-tier destination access</td><td>⚠️ Weak</td><td>Limited air access, no regional transport integration</td></tr>
+<tr><td><strong>D</strong> — Digital Tourism &amp; Diversification</td><td>Digital tools for MSMEs, data-driven marketing, product diversification (gastronomy, wellness, MICE, cruise)</td><td>⚠️ Emerging</td><td>No digital platform, limited data collection, no MICE strategy</td></tr>
+<tr><td><strong>S</strong> — Sustainable Tourism</td><td>Low-carbon operations, community-based tourism, international certification</td><td>⚠️ Partial</td><td>No certified sustainable destinations, no carbon monitoring</td></tr>
 </table>
 
 <div class="callout warn"><strong>ASEAN Compliance Score: 35/100.</strong> Bicol meets basic requirements in Resilience and Sustainability but has critical gaps in Digital Tourism, Accessible Travel, and Empowered People. Each gap represents a concrete action item addressed in Parts III and IV of this Guidebook.</div>
@@ -788,26 +272,19 @@ li {
   <text x="240" y="16" text-anchor="middle" font-family="Public Sans" font-size="9" font-weight="600" fill="#1B3A2D">Foreign Tourist Share (%) — Bicol vs. Competitors</text>
   <line x1="120" y1="30" x2="120" y2="200" stroke="#D0D8D0"/>
   <line x1="120" y1="200" x2="460" y2="200" stroke="#D0D8D0"/>
-  <rect x="125" y="185" width="30" height="15" fill="#C0392B" rx="2"><title>Bicol: 1.2%</title></rect>
-  <text x="160" y="196" font-family="Public Sans" font-size="7" fill="#333">Bicol 1.2%</text>
-  <rect x="125" y="165" width="30" height="35" fill="#8B6914" rx="2"><title>Palawan: 15%</title></rect>
-  <text x="160" y="172" font-family="Public Sans" font-size="7" fill="#333">Palawan 15%</text>
-  <rect x="125" y="140" width="30" height="60" fill="#8B6914" rx="2"><title>Bohol: 18%</title></rect>
-  <text x="160" y="152" font-family="Public Sans" font-size="7" fill="#333">Bohol 18%</text>
-  <rect x="125" y="110" width="30" height="90" fill="#2C5F74" rx="2"><title>Kerala: 10%</title></text>
-  <text x="160" y="125" font-family="Public Sans" font-size="7" fill="#333">Kerala 10%</text>
-  <rect x="270" y="170" width="30" height="30" fill="#2C5F74" rx="2"><title>Cebu: 12%</title></rect>
-  <text x="305" y="180" font-family="Public Sans" font-size="7" fill="#333">Cebu 12%</text>
-  <rect x="270" y="90" width="30" height="110" fill="#1B3A2D" rx="2"><title>Chiang Mai: 55%</title></rect>
-  <text x="305" y="105" font-family="Public Sans" font-size="7" fill="#333">Chiang Mai 55%</text>
-  <rect x="270" y="40" width="30" height="160" fill="#1B3A2D" rx="2"><title>Bali: 80%</title></rect>
-  <text x="305" y="65" font-family="Public Sans" font-size="7" fill="#333">Bali 80%</text>
+  <rect x="125" y="185" width="30" height="15" fill="#C0392B" rx="2"><title>Bicol: 1.2%</title></rect><text x="160" y="196" font-family="Public Sans" font-size="7" fill="#333">Bicol 1.2%</text>
+  <rect x="125" y="165" width="30" height="35" fill="#8B6914" rx="2"><title>Palawan: 15%</title></rect><text x="160" y="172" font-family="Public Sans" font-size="7" fill="#333">Palawan 15%</text>
+  <rect x="125" y="140" width="30" height="60" fill="#8B6914" rx="2"><title>Bohol: 18%</title></rect><text x="160" y="152" font-family="Public Sans" font-size="7" fill="#333">Bohol 18%</text>
+  <rect x="125" y="110" width="30" height="90" fill="#2C5F74" rx="2"><title>Kerala: 10%</title></rect><text x="160" y="125" font-family="Public Sans" font-size="7" fill="#333">Kerala 10%</text>
+  <rect x="270" y="170" width="30" height="30" fill="#2C5F74" rx="2"><title>Cebu: 12%</title></rect><text x="305" y="180" font-family="Public Sans" font-size="7" fill="#333">Cebu 12%</text>
+  <rect x="270" y="90" width="30" height="110" fill="#1B3A2D" rx="2"><title>Chiang Mai: 55%</title></rect><text x="305" y="105" font-family="Public Sans" font-size="7" fill="#333">Chiang Mai 55%</text>
+  <rect x="270" y="40" width="30" height="160" fill="#1B3A2D" rx="2"><title>Bali: 80%</title></rect><text x="305" y="65" font-family="Public Sans" font-size="7" fill="#333">Bali 80%</text>
   <text x="115" y="200" text-anchor="end" font-family="Public Sans" font-size="6.5" fill="#555">0%</text>
   <text x="115" y="150" text-anchor="end" font-family="Public Sans" font-size="6.5" fill="#555">25%</text>
   <text x="115" y="100" text-anchor="end" font-family="Public Sans" font-size="6.5" fill="#555">50%</text>
   <text x="115" y="50" text-anchor="end" font-family="Public Sans" font-size="6.5" fill="#555">75%</text>
 </svg>
-<div class="chart-title">Figure 3.1: Bicol's 1.2% Foreign Share — The Widest Gap in This Guidebook</div>
+<div class="chart-title">Figure 3.1: Bicol's 1.2% Foreign Share — The Widest Gap</div>
 </div>
 <h1>3. Strategic Gap Analysis</h1>
 
@@ -815,13 +292,13 @@ li {
 
 <table>
 <tr><th>#</th><th>Gap</th><th>Severity</th><th>Root Cause</th><th>Target Closure</th></tr>
-<tr><td>G1</td><td><strong>Foreign tourist share</strong> — 1.2% vs 8% PH average</td><td> [Critical]  Critical</td><td>No international marketing, limited air access, low brand awareness</td><td>2028: 7%</td></tr>
-<tr><td>G2</td><td><strong>Air access</strong> — Limited direct flights</td><td> [Critical]  Critical</td><td>No charter agreements, Naga Airport under-developed, no international routes</td><td>2027: 3 new routes</td></tr>
-<tr><td>G3</td><td><strong>Digital presence</strong> — Social media under-developed</td><td> [Critical]  Critical</td><td>No content strategy, low posting frequency, no video content</td><td>2027: 1M followers</td></tr>
-<tr><td>G4</td><td><strong>Provincial imbalance</strong> — 62% of visitors to Albay + CamSur only</td><td> [High]  High</td><td>No dispersal program, weaker infrastructure in Masbate/Catanduanes</td><td>2028: 40% to other provinces</td></tr>
-<tr><td>G5</td><td><strong>Low overnight stays</strong> — Sorsogon 22%, Catanduanes 29%</td><td> [High]  High</td><td>Lack of accommodations, no evening economy, limited tour packages</td><td>2028: 40%+ overnight</td></tr>
-<tr><td>G6</td><td><strong>No quality standards</strong> — No tourism certification program</td><td> [High]  High</td><td>No accreditation system, inconsistent service quality</td><td>2027: Bicol Quality Seal</td></tr>
-<tr><td>G7</td><td><strong>No MICE infrastructure</strong> — Convention facilities absent</td><td> [High]  High</td><td>No convention center, limited business hotels</td><td>2028: MICE operational</td></tr>
+<tr><td>G1</td><td><strong>Foreign tourist share</strong> — 1.2% vs 8% PH average</td><td>🔴 Critical</td><td>No international marketing, limited air access, low brand awareness</td><td>2028: 7%</td></tr>
+<tr><td>G2</td><td><strong>Air access</strong> — Limited direct flights</td><td>🔴 Critical</td><td>No charter agreements, Naga Airport under-developed, no international routes</td><td>2027: 3 new routes</td></tr>
+<tr><td>G3</td><td><strong>Digital presence</strong> — Social media under-developed</td><td>🔴 Critical</td><td>No content strategy, low posting frequency, no video content</td><td>2027: 1M followers</td></tr>
+<tr><td>G4</td><td><strong>Provincial imbalance</strong> — 62% of visitors to Albay + CamSur only</td><td>🟡 High</td><td>No dispersal program, weaker infrastructure in Masbate/Catanduanes</td><td>2028: 40% to other provinces</td></tr>
+<tr><td>G5</td><td><strong>Low overnight stays</strong> — Sorsogon 22%, Catanduanes 29%</td><td>🟡 High</td><td>Lack of accommodations, no evening economy, limited tour packages</td><td>2028: 40%+ overnight</td></tr>
+<tr><td>G6</td><td><strong>No quality standards</strong> — No tourism certification program</td><td>🟡 High</td><td>No accreditation system, inconsistent service quality</td><td>2027: Bicol Quality Seal</td></tr>
+<tr><td>G7</td><td><strong>No MICE infrastructure</strong> — Convention facilities absent</td><td>🟡 High</td><td>No convention center, limited business hotels</td><td>2028: MICE operational</td></tr>
 </table>
 
 <h2>3.2 SWOC Analysis</h2>
@@ -831,7 +308,7 @@ li {
 <tr><td>World-class unique products (Mayon, whale sharks)<br>Distinctive cuisine recognized by Michelin<br>Strong domestic tourism base (4.38M)<br>6 provinces with diverse offerings<br>Peñafrancia — built-in mass audience<br>Bicolano diaspora (2M+) — captive market</td><td>Low foreign tourist share (1.2%)<br>Limited air access (no international flights)<br>Under-developed digital marketing<br>No quality certification program<br>Seasonal concentration (summer + Peñafrancia)<br>Masbate and Catanduanes neglected<br>No MICE infrastructure</td></tr>
 </table>
 
-<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p><table>
+<table>
 <tr><th style="width:50%; background:#1565c0;">Opportunities</th><th style="width:50%; background:#e65100;">Threats</th></tr>
 <tr><td>Mayon UNESCO World Heritage bid (global attention)<br>PH Michelin gastronomy designation 2026<br>India visa-free policy — new source market<br>ASEAN tourism integration 2026–2030<br>Cruise tourism growth (10 ships since 2023)<br>Digital nomad trend post-pandemic<br>Diaspora reconnect trend</td><td>Mayon volcanic eruption (active)<br>Typhoon season (Q3-Q4 annually)<br>China market collapse (-86% since 2019)<br>Budget constraints for government tourism<br>Competition from Palawan, Cebu, Siargao<br>Climate change impacting seasons<br>Over-tourism risk in Caramoan</td></tr>
 </table>
@@ -848,9 +325,9 @@ li {
 </div>
 
 
-<h1>4. Financial Projections &amp; Economic Impact Model</h1>
+<h1>3B. Financial Projections &amp; Economic Impact Model</h1>
 
-<h2>3B.1 Revenue Growth<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p> Trajectory</h2>
+<h2>3B.1 Revenue Growth Trajectory</h2>
 <p>Bicol tourism revenue must grow from PHP 3.3 billion (2024) to PHP 34.5 billion (2028) — a 10.4x increase. This section models the specific levers required to achieve this trajectory.</p>
 
 <table>
@@ -870,7 +347,7 @@ li {
 <table>
 <tr><th>Scenario</th><th>Direct Revenue</th><th>Indirect &amp; Induced</th><th>Total Economic Impact</th><th>Jobs Supported</th></tr>
 <tr><td>Conservative (1.8x)</td><td>PHP 34.5B</td><td>PHP 27.6B</td><td>PHP 62.1B</td><td>~125,000</td></tr>
-<tr><td>Moderate (2.1x)</td><td>PHP 34.5B</td><td>PHP 37.9B</td><<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>td>PHP 72.4B</td><td>~145,000</td></tr>
+<tr><td>Moderate (2.1x)</td><td>PHP 34.5B</td><td>PHP 37.9B</td><td>PHP 72.4B</td><td>~145,000</td></tr>
 <tr><td>Optimistic (2.4x)</td><td>PHP 34.5B</td><td>PHP 48.3B</td><td>PHP 82.8B</td><td>~165,000</td></tr>
 </table>
 
@@ -882,7 +359,7 @@ li {
 <tr><td>Marketing &amp; Digital (Part II)</td><td>PHP 18.7M</td><td>PHP 3.5B incremental arrivals revenue</td><td>187:1</td></tr>
 <tr><td>Product Development (Part III)</td><td>PHP 55.0M</td><td>PHP 8.0B incremental product revenue</td><td>145:1</td></tr>
 <tr><td>Air Access Development</td><td>PHP 10.0M</td><td>PHP 5.0B incremental foreign revenue</td><td>500:1</td></tr>
-<tr><td>Sustainability Programs</td><td>PHP 10.0M</td><td>PHP<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p> 1.0B premium certification revenue</td><td>100:1</td></tr>
+<tr><td>Sustainability Programs</td><td>PHP 10.0M</td><td>PHP 1.0B premium certification revenue</td><td>100:1</td></tr>
 <tr><td><strong>Total Investment</strong></td><td><strong>PHP 93.7M</strong></td><td><strong>PHP 17.5B</strong></td><td><strong>187:1</strong></td></tr>
 </table>
 
@@ -896,7 +373,7 @@ li {
 <tr><td>Facebook (DOT Region V)</td><td>Active, formal tone</td><td>Low</td><td>Inconsistent</td></tr>
 <tr><td>Instagram</td><td>Not present or inactive</td><td>—</td><td>—</td></tr>
 <tr><td>TikTok</td><td>Not present</td><td>—</td><td>—</td></tr>
-<<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>tr><td>YouTube</td><td>Not present</td><td>—</td><td>—</td></tr>
+<tr><td>YouTube</td><td>Not present</td><td>—</td><td>—</td></tr>
 <tr><td>X (Twitter)</td><td>Not present</td><td>—</td><td>—</td></tr>
 <tr><td>Website</td><td>DOT Bicol regional site</td><td>Low traffic</td><td>Irregular updates</td></tr>
 </table>
@@ -910,17 +387,17 @@ li {
 <h3>4.2.1 The 6-Content Pillar System</h3>
 <table>
 <tr><th>Pillar</th><th>Hashtag</th><th>Emotion</th><th>Content Types</th><th>Target %</th></tr>
-<tr><td><strong>Natural Wonders</strong></td><td>#BicolWOW</td><td>Awe, wanderlust</td><td>Drone Reels, photo carousels, time-lapses, cinem<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>atics</td><td>30%</td></tr>
+<tr><td><strong>Natural Wonders</strong></td><td>#BicolWOW</td><td>Awe, wanderlust</td><td>Drone Reels, photo carousels, time-lapses, cinematics</td><td>30%</td></tr>
 <tr><td><strong>Food &amp; Culture</strong></td><td>#BicolFoodie</td><td>Hunger, craving, pride</td><td>Food Reels, recipe cards, restaurant features, cooking</td><td>20%</td></tr>
 <tr><td><strong>Travel Guides</strong></td><td>#BicolGuide</td><td>Practical value, utility</td><td>Itineraries, budget breakdowns, transport guides, tips</td><td>20%</td></tr>
 <tr><td><strong>Bicolano Pride</strong></td><td>#BicolanoPride</td><td>Nostalgia, identity</td><td>Diaspora stories, history, heritage, language</td><td>15%</td></tr>
-<tr><td><strong>Events &amp; Festival<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>s</strong></td><td>#BicolNow</td><td>Urgency, FOMO</td><td>Event promos, live streams, countdowns, recaps</td><td>10%</td></tr>
+<tr><td><strong>Events &amp; Festivals</strong></td><td>#BicolNow</td><td>Urgency, FOMO</td><td>Event promos, live streams, countdowns, recaps</td><td>10%</td></tr>
 <tr><td><strong>Local Stories</strong></td><td>#BicolPeople</td><td>Connection, warmth</td><td>Artisan profiles, community features, human interest</td><td>5%</td></tr>
 </table>
 
 <h2>4.3 Platform-by-Platform Playbook</h2>
 
-<h3>4.3.1 Facebook (P<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>rimary Channel)</h3>
+<h3>4.3.1 Facebook (Primary Channel)</h3>
 <p><strong>Target:</strong> 1M followers by December 2027</p>
 <table>
 <tr><th>Element</th><th>Strategy</th></tr>
@@ -930,13 +407,13 @@ li {
 <tr><td>Boost strategy</td><td>PHP 500/day on top-performing organic Reel. Scale to PHP 4,000/day by Month 6</td></tr>
 <tr><td>Community management</td><td>Reply to all comments within 2 hours (algorithm boosts pages that engage)</td></tr>
 <tr><td>Facebook Group</td><td>"Bicol Travelers Community" — peer-to-peer advice, trip reports, photo sharing</td></tr>
-</<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>table>
+</table>
 
 <h3>4.3.2 Instagram (Visual Anchor)</h3>
 <table>
 <tr><th>Element</th><th>Strategy</th></tr>
 <tr><td>Post frequency</td><td>1-2x/day (Reels + carousel or single image)</td></tr>
-<tr><td>Content focu<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>s</td><td>High-production-value visuals — drone shots, golden hour, food close-ups</td></tr>
+<tr><td>Content focus</td><td>High-production-value visuals — drone shots, golden hour, food close-ups</td></tr>
 <tr><td>Stories</td><td>Daily behind-the-scenes, polls ("Which Bicol beach next?"), Q&A</td></tr>
 <tr><td>Reels strategy</td><td>Trending audio + Bicol footage = viral potential</td></tr>
 <tr><td>Influencer collaboration</td><td>Monthly takeovers by Bicolano creators</td></tr>
@@ -947,7 +424,7 @@ li {
 <tr><th>Element</th><th>Strategy</th></tr>
 <tr><td>Post frequency</td><td>2x/day (short, punchy, trend-driven)</td></tr>
 <tr><td>Content focus</td><td>Local challenges (#BicolChallenge), food porn, "Hidden gem" reveals, transition videos</td></tr>
-<tr><td>Audio strategy</td><td>Use trending sounds + original Bicol music <p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>(collaborate with local artists)</td></tr>
+<tr><td>Audio strategy</td><td>Use trending sounds + original Bicol music (collaborate with local artists)</td></tr>
 <tr><td>Duet/Stitch</td><td>React to traveler videos about Bicol, amplify UGC</td></tr>
 </table>
 
@@ -964,7 +441,7 @@ li {
 <table>
 <tr><th>Element</th><th>Strategy</th></tr>
 <tr><td>Post frequency</td><td>3-5x/day (threads, news, engagement)</td></tr>
-<tr><td>Content focus</td><td>Real-t<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>ime updates (Mayon status, event alerts), travel tips, community highlights</td></tr>
+<tr><td>Content focus</td><td>Real-time updates (Mayon status, event alerts), travel tips, community highlights</td></tr>
 <tr><td>Threads</td><td>Weekly: "10 Hidden Spots in Bicol" type threads — high retweet potential</td></tr>
 </table>
 
@@ -987,7 +464,7 @@ li {
 <tr><td>Event/festival promotion</td><td>PHP 20,000</td><td>Attendance, awareness</td><td>Geographic: Bicol + nearby regions</td></tr>
 <tr><td>Influencer collaborations</td><td>PHP 50,000</td><td>Content creation, reach</td><td>Per-influencer negotiated</td></tr>
 <tr><td>Google Ads (search + display)</td><td>PHP 30,000</td><td>Website traffic, bookings</td><td>"Bicol travel," "Mayon tour" keywords</td></tr>
-<tr><td><strong>Total</strong></td><td><strong>PHP 200,000</strong></td><td>—</td><td>—</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>PHP 200,000</strong></td><td></td><td></td></tr>
 </table>
 
 <h2>4.6 Content Production Infrastructure</h2>
@@ -997,23 +474,23 @@ li {
 <tr><td>Action camera</td><td>GoPro Hero 12 — water activities, POV content</td><td>PHP 30,000</td></tr>
 <tr><td>Primary camera</td><td>Sony A6400 + 16-50mm + 50mm f/1.8</td><td>PHP 65,000</td></tr>
 <tr><td>Editing hardware</td><td>MacBook Air M3 (16GB)</td><td>PHP 75,000</td></tr>
-<tr><td>Editing software</td><td>Adobe Creative Suite + DaVinci Resolve</td><td>PHP 35,000/yr</td><p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p></tr>
+<tr><td>Editing software</td><td>Adobe Creative Suite + DaVinci Resolve</td><td>PHP 35,000/yr</td></tr>
 <tr><td>AI tools suite</td><td>TypeUI.sh, fal.ai, Canva Pro, video-auto-edit</td><td>PHP 25,000/yr</td></tr>
 <tr><td>Cloud storage</td><td>Google Workspace (2TB shared)</td><td>PHP 12,000/yr</td></tr>
 <tr><td>Social media scheduler</td><td>Buffer or Hootsuite Professional</td><td>PHP 15,000/yr</td></tr>
-<tr><td><strong>Total Year 1 Equipment &amp; Software</strong></td><td>—</td><td><strong>PHP 327,000</strong></td></tr>
+<tr><td><strong>Total Year 1 Equipment &amp; Software</strong></td><td></td><td><strong>PHP 327,000</strong></td></tr>
 </table>
 
 <h2>4.7 Viral Content Blueprint</h2>
 <p><strong>The formula for a tourism Reel that reaches 500K+ views:</strong></p>
 <ol>
-<li><strong>First 3 seconds:</strong> Most notable visual (Mayon at sunrise, whale shark appearance, drone pull-back)</li>
-<li><strong>Text overlay hook:</strong> "This is in the Philippines?! " or "POV: You finally made it to Bicol"</li>
+<li><strong>First 3 seconds:</strong> Most stunning visual (Mayon at sunrise, whale shark appearance, drone pull-back)</li>
+<li><strong>Text overlay hook:</strong> "This is in the Philippines?! 🤯" or "POV: You finally made it to Bicol"</li>
 <li><strong>Trending audio:</strong> Use a current viral sound; edit visuals to match the beat</li>
 <li><strong>Captions:</strong> Open captions for silent viewing (80%+ watch without sound)</li>
-<li><strong>Call to action in caption:</strong> "Tag someone you'd bring here  #BicolWOW #Philippines"</li>
+<li><strong>Call to action in caption:</strong> "Tag someone you'd bring here ✈️ #BicolWOW #Philippines"</li>
 <li><strong>Location tag:</strong> Always tag the specific location (boosts local discovery)</li>
-<li><strong>Post at:</strong> 7-9 PM (highest Filipino Facebook <p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>engagement)</li>
+<li><strong>Post at:</strong> 7-9 PM (highest Filipino Facebook engagement)</li>
 </ol>
 
 <div class="callout"><strong>Cornerstone Reel Titles (First 30 Days):</strong><br>
@@ -1032,35 +509,6 @@ li {
   <div class="part-desc">Province-by-province action plans, air access strategy, product development, and event calendar — grounded in global best practices.</div>
 </div>
 
-<h2>4.5 Facebook Group Str<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>ategy: "Bicol Travelers Community"</h2>
-<p>Beyond the main Facebook page, a dedicated Facebook Group called "Bicol Travelers Community" will serve as a peer-to-peer platform where travelers share experiences, ask questions, and plan trips. Groups generate 3x more engagement than pages and build long-term community loyalty.</p>
-
-<table>
-<tr><th>Element</th><th>Strategy</th></tr>
-<tr><td>Group Purpose</td><td>Peer-to-peer travel advice, trip reports, photo sharing, meetup coordination</td></tr>
-<tr><td>Target Membership</td><td>50,000 members by 2028</td></tr>
-<tr><td>Moderation</td><td>3 admins (DOT staff) + 5 community moderators (volunteer power users)</td></tr>
-<tr><td>Weekly Prompts</td><td>"Share your Mayon sunrise photo," "Best Bicol Express in Legazpi?" "Hidden gem thread"</td></tr>
-<tr><td>Rules</td><td>No spam, no self-promotion, be kind, stay on topic</td></tr>
-<tr><td>DOT Role</td><td>Post official updates, answer questions, amplify member content on main page</td></tr>
-</table>
-
-<div class="insight-box"><div class="label">Community Building Insight</div>
-<p>Facebook Groups create a network effect that compounds over time. Each member's question and answer becomes searchable content that attracts new members. The "Bicol Travelers Community" should target 5,000 members in Year 1, 20,000 in Year 2, and 50,000 in Year 3. At 50,000 members, the group becomes a self-sustaining content engine that generates organic reach far beyond what paid advertising could achieve.</p>
-</div>
-
-<h2>4.6 YouTube Content Strategy</h2>
-<p>YouTube serves as the long-form content anchor for the DOT V digital ecosystem. While Reels drive awareness, YouTube drives consideration — the critical middle of the travel decision funnel where travelers research destinations in depth before booking.</p>
-
-<table>
-<tr><th>Series</th><th>Format</th><th>Frequency</th><th>Target Length</th><th>SEO Keywords</th></tr>
-<tr><td>Ultimate Bicol Travel Guide</td><td>Destination deep-dive, 6 provinces</td><td>2x/month</td><td>8-15 min</td><td>"Bicol travel guide," "Mayon tour," "Caramoan island hopping"</td></tr>
-<tr><td>Bicol Sa Umaga</td><td>Short documentary, local stories</td><td>Weekly</td><td>5-8 min</td><td>"Bicol culture," "Bicolano <p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>food," "Bicol hidden gems"</td></tr>
-<tr><td>Bicol on a Budget</td><td>Practical travel guides</td><td>2x/month</td><td>8-12 min</td><td>"Bicol budget travel," "PHP 1500 day Bicol"</td></tr>
-<tr><td>Festival Series</td><td>Event coverage</td><td>Per festival</td><td>5-10 min</td><td>"Peñafrancia 2026," "Magayon festival," "Ibalong"</td></tr>
-</table>
-
-
 <h1>5. Six-Province Development Plans</h1>
 
 <h2>5.1 Albay — Mayon Volcano &amp; Heritage Tourism</h2>
@@ -1073,7 +521,7 @@ li {
 <tr><td>Night Mayon Experience</td><td>Lava viewing platform with telescopes, nighttime food market, cultural performances at Cagsawa</td><td>Q4 2026</td><td>PHP 5M</td></tr>
 <tr><td>ATV Trail Expansion</td><td>Extended ATV routes with photo points, guides, safety certification</td><td>Q2 2027</td><td>PHP 3M</td></tr>
 <tr><td>Legazpi Food and Culture District</td><td>Pedestrian street with Bicol restaurants, cooking classes, artisan market</td><td>2027</td><td>PHP 8M</td></tr>
-<tr><td>Albay MICE Center</td><td>500-person convention facilit<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>y with breakout rooms, business amenities</td><td>2028</td><td>PHP 50M</td></tr>
+<tr><td>Albay MICE Center</td><td>500-person convention facility with breakout rooms, business amenities</td><td>2028</td><td>PHP 50M</td></tr>
 <tr><td>Kawa-Kawa Hill Tourism Upgrade</td><td>Pilgrimage site improvements, viewing deck, souvenir shops, restrooms</td><td>Q3 2026</td><td>PHP 2M</td></tr>
 </table>
 
@@ -1087,7 +535,7 @@ li {
 <tr><td>CWC International Wakeboard Competition</td><td>Annual global event — media coverage, participant tourism</td><td>2027 onward</td><td>PHP 10M/yr</td></tr>
 <tr><td>Peñafrancia Tourism Upgrade</td><td>Visitor management system, multi-language pilgrimage guides, digital queuing</td><td>Q3 2026</td><td>PHP 5M</td></tr>
 <tr><td>Naga Creative City Application</td><td>UNESCO Creative City of Gastronomy — leverage Bicol cuisine</td><td>2027</td><td>PHP 2M</td></tr>
-<tr><td>Mt. Isarog Eco-Tourism Circuit</td><td>Trekking trails, camping sites, canopy walkway, hot spring development</td><td>2027-2028</td><td>PHP 8M</td></<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>tr>
+<tr><td>Mt. Isarog Eco-Tourism Circuit</td><td>Trekking trails, camping sites, canopy walkway, hot spring development</td><td>2027-2028</td><td>PHP 8M</td></tr>
 </table>
 
 <h2>5.3 Camarines Norte — Beach &amp; Digital Nomads</h2>
@@ -1109,7 +557,7 @@ li {
 <tr><th>Initiative</th><th>Description</th><th>Timeline</th><th>Budget</th></tr>
 <tr><td>Donsol Whale Shark Eco-Tourism Center</td><td>World-class visitor center, certification program, research station</td><td>2026-2027</td><td>PHP 12M</td></tr>
 <tr><td>Butanding Interaction Code of Conduct</td><td>Mandatory briefing, boat limits (10 boats/day), no-touch policy enforced, guide certification</td><td>Q3 2026</td><td>PHP 1M</td></tr>
-<tr><td>Sorsogon Eco-Volunteer Program</td><td>Free accommodation in exchange for reef cleanup, mangrov<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>e planting, community teaching</td><td>Q1 2027</td><td>PHP 2M</td></tr>
+<tr><td>Sorsogon Eco-Volunteer Program</td><td>Free accommodation in exchange for reef cleanup, mangrove planting, community teaching</td><td>Q1 2027</td><td>PHP 2M</td></tr>
 <tr><td>Matnog-Masbate Ferry Tourism Corridor</td><td>Roll-on/roll-off ferry tourism package linking Sorsogon and Masbate</td><td>2027</td><td>PHP 4M</td></tr>
 </table>
 
@@ -1135,23 +583,6 @@ li {
 <tr><td>Catanduanes Bucket List Challenge</td><td>"7 Must-Do in Catanduanes" passport-style program with stamps and rewards</td><td>Q2 2027</td><td>PHP 1M</td></tr>
 </table>
 
-
-<h2>5.7 Infrastructure and Investment Requirements Summary</h2>
-
-<p>The six-province development plans require coordinated investment across multiple funding sources. Below is the consolidated investment summary for all provincial initiatives.</p>
-
-<table>
-<tr><th>Province</th><th>Number of Projects</th><th>Total Investment</th><th>DOT Funding</th><th>LGU/Other Funding</th><th>Timeline</th></tr>
-<tr><td>Albay</td><td>8</td><td>PHP 88.5M</td><td>PHP 35.0M</td><td>PHP 53.5M</td><td>2026-2028</td></tr>
-<tr><td>Camarines Sur</td><td>8</td><td>PHP 40.0M</td><td>PHP 22.0M</td><td>PHP 18.0M</td><td>2026-2028</td></tr>
-<tr><td>Camarines Norte</td><td>6</td><td>PHP 22.5M</td><td>PHP 14.0M</td><td>PHP 8.5M</td><td>2026-2028</td></tr>
-<tr><td>Sorsogon</td><td>6</td><td>PHP 29.0M</td><td>PHP 18.0M</td><td>PHP 11.0M</td><td>2026-2028</td></tr>
-<tr><td>Masbate</td><td>4</td><td>PHP 16.0M</td><td>PHP 10.0M</td><td>PHP 6.0M</td><td>2027-2028</td></tr>
-<tr><td>Catanduanes</td><td>4</td><td>PHP 60.5M</td><td>PHP 12.5M</td><td>PHP 48.0M</td><td>2026-2028</td></tr>
-<tr><td><strong>Total</strong></td><td><strong>36</strong></td><td><strong>PHP 256.5M</strong></td><td><strong>PHP 111.5M</strong></td><td><strong>PHP 145.0M</strong></td><td><strong>2026-2028</strong></td></tr>
-</table>
-
-<div class="callout info"><strong>Investment Strategy:</strong> The total investment requirement of PHP 256.5M across 36 projects over 3 years represents a significant but achievable commitment. DOT funding of PHP 111.5M (43%) will come from: regular office budget (WFP/GAA), central office special projects, and tourism infrastructure programs. LGU and other funding of PHP 145.0M (57%) will be sourced from: LGU development funds, DPWH convergence programs, DENR environmental funds, DTI livelihood programs, and private sector investment. The ratio is designed to maximize leverage of DOT seed funding while ensuring local ownership and sustainabil<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>ity.</p>
 <h1>6. Air Access Strategy</h1>
 
 <h2>6.1 Current Air Connectivity</h2>
@@ -1177,12 +608,12 @@ li {
 </table>
 
 <h1>7. Festival &amp; Events Calendar</h1>
-<tab<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>le>
+<table>
 <tr><th>Month</th><th>Festival</th><th>Province</th><th>Est. Attendance</th><th>Marketing Angle</th></tr>
 <tr><td>January</td><td>Kasanggayahan Festival</td><td>Sorsogon</td><td>50,000</td><td>New year, new adventure</td></tr>
 <tr><td>February</td><td>Philippine Hot Air Balloon</td><td>Albay</td><td>100,000</td><td>Unique visual content</td></tr>
 <tr><td>March-April</td><td>Holy Week Pilgrimages</td><td>All provinces</td><td>500,000+</td><td>Religious tourism, heritage</td></tr>
-<tr><td>May</td><td>Magayon Festival</td><td>Albay</td><td>200,000</td><td>Mayon celebration, month-long<<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>/td></tr>
+<tr><td>May</td><td>Magayon Festival</td><td>Albay</td><td>200,000</td><td>Mayon celebration, month-long</td></tr>
 <tr><td>June</td><td>Pili Festival</td><td>Camarines Sur</td><td>50,000</td><td>Local product, food tourism</td></tr>
 <tr><td>July</td><td>Butanding Festival</td><td>Sorsogon</td><td>30,000</td><td>Whale shark season peak</td></tr>
 <tr><td>August</td><td>Catanduanes Surf Comp</td><td>Catanduanes</td><td>20,000</td><td>Youth, extreme sports</td></tr>
@@ -1229,11 +660,11 @@ li {
 <p>A 5-star certification system for all tourism enterprises in the region:</p>
 <table>
 <tr><th>Level</th><th>Requirements</th><th>Validity</th></tr>
-<tr><td>Star  Basic</td><td>Registered with DOT, basic safety standards, complaint mechanism</td><td>1 year</td></tr>
-<tr><td>Star Star  Standard</td><td>Basic + trained staff, basic English, cleanliness certification</td><td>2 years</td></tr>
-<tr><td>Star Star Star  Excellent</td><td>Standard + sustainability practices, online booking, accessibility features</td><td>2 years</td></tr>
-<tr><td>Star Star Star Star  Premium</td><td>Excellent + international certifications, multi-language, carbon measurement</td><td>3 years</td></tr>
-<tr><td>Star Star Star Star Star  World Class</td><td>Premium + ASEAN standards compliance, published sustainability report</td><td>3 years</td></tr>
+<tr><td>⭐ Basic</td><td>Registered with DOT, basic safety standards, complaint mechanism</td><td>1 year</td></tr>
+<tr><td>⭐⭐ Standard</td><td>Basic + trained staff, basic English, cleanliness certification</td><td>2 years</td></tr>
+<tr><td>⭐⭐⭐ Excellent</td><td>Standard + sustainability practices, online booking, accessibility features</td><td>2 years</td></tr>
+<tr><td>⭐⭐⭐⭐ Premium</td><td>Excellent + international certifications, multi-language, carbon measurement</td><td>3 years</td></tr>
+<tr><td>⭐⭐⭐⭐⭐ World Class</td><td>Premium + ASEAN standards compliance, published sustainability report</td><td>3 years</td></tr>
 </table>
 
 <h1>10. Crisis Management Plan</h1>
@@ -1241,7 +672,7 @@ li {
 <tr><th>Risk</th><th>Probability</th><th>Impact</th><th>Early Warning</th><th>Response Protocol</th></tr>
 <tr><td>Mayon eruption</td><td>Medium-High</td><td>Critical — closure of Albay tourism</td><td>PHIVOLCS alerts (24-48 hr)</td><td>Activate safe viewing areas outside 6km PDZ, promote other 5 provinces</td></tr>
 <tr><td>Typhoon (Q3-Q4)</td><td>High</td><td>Medium — 3-7 day disruption</td><td>PAGASA 72-hr forecast</td><td>Pre-position content, offer flexible booking, fast recovery comms</td></tr>
-<tr><td>Health outbreak</td><td>Low-Medium</td><td>Medium — travel restrictions</td><td>DOH alerts</td><td>Health<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p> protocols, hygiene certification, contactless options</td></tr>
+<tr><td>Health outbreak</td><td>Low-Medium</td><td>Medium — travel restrictions</td><td>DOH alerts</td><td>Health protocols, hygiene certification, contactless options</td></tr>
 <tr><td>Over-tourism incident</td><td>Low-Medium</td><td>Medium — reputation damage</td><td>Visitor count monitoring</td><td>Activate dispersal plan, limit access to sensitive sites</td></tr>
 </table>
 
@@ -1255,7 +686,7 @@ li {
 </div>
 
 
-<h1>18. World Best Practice Case Studies</h1>
+<h1>14A. World Best Practice Case Studies</h1>
 
 <h2>14A.1 Bali, Indonesia — The Community Tourism Model</h2>
 <div class="comparison">
@@ -1298,60 +729,22 @@ li {
 <tr><td>Kerala</td><td>Responsible tourism + signature product + wellness</td><td>Bicol responsible tourism seal + Bicol Express food trail + wellness circuit</td><td>2027-2028</td></tr>
 </table>
 
-
-<h2>10A. Expanded Global Case Studies</h2>
-
-<h3>10A.1 Langkawi, Malaysia — Geopark and Duty-Free Model</h3>
-<div class="comparison">
-<div class="comp-item benchmark"><div class="label">World Standard: Langkawi</div><p>3.9M visitors, 65% foreign. UNESCO Global Geopark status. Duty-free island status drives shopping tourism from Thailand and Singapore. Cable car and Sky Bridge are signature attractions. Strong environmental certification program with mandatory compliance for all tourism businesses.</p></div>
-<div class="comp-item bicol"><div class="label">Bicol Application</div><p>Mayon's UNESCO Geopark designation pathway mirrors Langkawi's journey. Bicol's duty-free potential at seaports (pending legislative action) could replicate the shopping tourism model. Cable car development to Mayon viewpoints is a long-term high-impact option worth studying.</p></div>
-</div>
-
-<h3>10A.2 <p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>Hoi An, Vietnam — Heritage and Tailoring Tourism</h3>
-<div class="comparison">
-<div class="comp-item benchmark"><div class="label">World Standard: Hoi An</div><p>4.2M visitors, 60% foreign. UNESCO World Heritage ancient town. Famous for "Hoi An tailoring" — a destination-wide product where 400+ tailors create custom clothing in 24 hours. Lantern festival creates iconic imagery. Cycling tourism integrated with heritage experience. No airport — visitors arrive via Da Nang, 45 minutes away.</p></div>
-<div class="comp-item bicol"><div class="label">Bicol Application</div><p>Hoi An proves that a secondary product can become a primary tourism draw. Bicol's abaca products (bags, mats, crafts) and Pili-based products (confectionery, oil, cosmetics) could serve a similar role. A "Bicol Craft Trail" combining abaca weaving demonstrations, Pili factory visits, and markets could add 1-2 days to visitor itineraries.</p></div>
-</div>
-
-<h3>10A.3 El Nido, Palawan — Access-Led Transformation</h3>
-<div class="comparison">
-<div class="comp-item benchmark"><div class="label">Philippine Benchmark: El Nido</div><p>Transformed from remote fishing village to world destination through airport development (Lio Airport, private sector) and international marketing. Now 300K+ annual visitors with 40%+ foreign share. Premium pricing (PHP 5K-15K/night average). Environmental management fee (PHP 200) funds conservation.</p></div>
-<div class="comp-item bicol"><div class="label">Bicol Parallel Critical</div><p>Catanduanes is at a pre-transformation stage similar to El Nido circa 2010. The parallel is instructive: airport expansion + international marketing + signature product positioning could trigger a similar transformation. Catanduanes' waves are its El Nido lagoons — the signature asset that defines the destination.</p></div>
-</div>
-
-<h3>10A.4 Okinawa, Japan — Distinctive Island Culture</h3>
-<div class="comparison">
-<div class="comp-item benchmark"><div class="label">World Standard: Okinawa</div><p>9.8M visitors (pre-pandemic). Distinct Ryukyu culture differentiates from mainland Japan. Churaumi Aquarium is a top-3 Asian aquarium. American Village (US military base heritage repurposed as shopping/entertainment). Direct flights from Korea, Taiwan, China, Hong Kong.</p></div>
-<div class="comp-item bicol"><div class="label">Bicol Application</div><p>Okinawa's model of differentiating through unique regional culture is directly applicable. Bicol's distinct language (Bicolano), cuisine (Bicol Express, Laing, Pili), and traditions (Ibalong epic, Peñafrancia) are the region's "Ryukyu" — authentic cultural assets that no other Philippine destination can replicate. A "Bicolano Cultural Center" in Legazpi could serve as an anchor attraction.</p></div>
-</div>
-
-<h3>10A.5 Tasmania, Australia — Wilderness and Food Synergy</h3>
-<div class="comparison">
-<div class="comp-i<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>tem benchmark"><div class="label">World Standard: Tasmania</div><p>1.3M visitors. Wilderness brand anchored by UNESCO World Heritage wilderness area. MONA (Museum of Old and New Art) transformed Hobart from transit point to destination. Farm-to-table food movement is central to marketing. Overland Track (65km, 6-day trek) is one of world's great multi-day walks — booked months in advance.</p></div>
-<div class="comp-item bicol"><div class="label">Bicol Application</div><p>Bicol's food culture (Michelin-recognized) combined with natural assets mirrors Tasmania's wilderness+food synergy. The MONA effect proves one iconic attraction transforms a destination. Bicol's equivalent could be a world-class Mayon Volcano Interpretive Center designed by a signature architect, or a flagship "Bicol Food Hall" in Legazpi featuring all 6 provincial cuisines.</p></div>
-</div>
-
-<h3>10A.6 Boracay, Philippines — Rehabilitation Success Story</h3>
-<div class="comparison">
-<div class="comp-item benchmark"><div class="label">Philippine Benchmark: Boracay</div><p>2M+ visitors at peak. Closed for 6 months in 2018 for environmental rehabilitation. Post-rehabilitation: daily visitor cap (19,000), banned single-use plastics, mandatory wastewater treatment, no beach parties. Outcome: higher quality visitors, longer stays, higher spend per visitor. Revenue recovered within 18 months of reopening.</p></div>
-<div class="comp-item bicol"><div class="label">Bicol Application</div><p>Boracay's model is the template for Calaguas and Caramoan. Proactive capacity management BEFORE a crisis is far cheaper than reactive rehabilitation. Bicol has the advantage of learning from Boracay's experience — implementing carrying capacity, waste management, and quality standards before environmental degradation occurs rather than after.</p></div>
-</div>
 <h1>11. Office Structure &amp; Staffing</h1>
 
 <h2>11.1 Recommended DOT Region V Structure</h2>
 <table>
 <tr><th>Division</th><th>Roles</th><th>Key Responsibilities</th></tr>
 <tr><td><strong>Office of the Regional Director</strong></td><td>Director, Assistant Director, Admin Support</td><td>Strategic oversight, stakeholder relations, policy direction</td></tr>
-<tr><td><strong>Marketing &amp; Digital</strong></td><td>Marketing Manager, Social Media<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p> Manager (2), Content Creator, Graphic Designer, Videographer</td><td>Social media, content production, advertising, brand management, website, analytics</td></tr>
+<tr><td><strong>Marketing &amp; Digital</strong></td><td>Marketing Manager, Social Media Manager (2), Content Creator, Graphic Designer, Videographer</td><td>Social media, content production, advertising, brand management, website, analytics</td></tr>
 <tr><td><strong>Product Development</strong></td><td>Product Manager (2), Community Tourism Officer, Sustainability Officer</td><td>Tourism product development, community-based tourism, quality standards, sustainability</td></tr>
-<tr><td><strong>Promotions &amp; Events</strong></td><td>Events Coordinator, Partner<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>ships Officer, International Marketing Officer</td><td>Festivals, events, airline/OTA partnerships, influencer program, trade shows</td></tr>
-<tr><td><strong>Planning &amp; Research</strong></td><td>Planning Officer, Data Analyst, M&amp;E Officer</td><td>Data collection, KPI tracking, research, strategic planning, das<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>hboard management</td></tr>
+<tr><td><strong>Promotions &amp; Events</strong></td><td>Events Coordinator, Partnerships Officer, International Marketing Officer</td><td>Festivals, events, airline/OTA partnerships, influencer program, trade shows</td></tr>
+<tr><td><strong>Planning &amp; Research</strong></td><td>Planning Officer, Data Analyst, M&amp;E Officer</td><td>Data collection, KPI tracking, research, strategic planning, dashboard management</td></tr>
 <tr><td><strong>Provincial Extension Offices</strong></td><td>1 Tourism Officer per province (6 total)</td><td>Provincial coordination, ground implementation, local stakeholder liaison</td></tr>
 </table>
 
 <h1>12. 3-Year Budget Summary</h1>
 <table>
-<tr><th>Category</th><th>Year 1 (2026)</th><th>Year 2 (2027)</th><th>Year 3 (2028)</th><<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>th>Total</th></tr>
+<tr><th>Category</th><th>Year 1 (2026)</th><th>Year 2 (2027)</th><th>Year 3 (2028)</th><th>Total</th></tr>
 <tr><td>Marketing &amp; Advertising</td><td>PHP 4.2M</td><td>PHP 6.5M</td><td>PHP 8.0M</td><td>PHP 18.7M</td></tr>
 <tr><td>Product Development</td><td>PHP 15.0M</td><td>PHP 22.0M</td><td>PHP 18.0M</td><td>PHP 55.0M</td></tr>
 <tr><td>Events &amp; Festivals</td><td>PHP 5.0M</td><td>PHP 8.0M</td><td>PHP 10.0M</td><td>PHP 23.0M</td></tr>
@@ -1361,7 +754,7 @@ li {
 <tr><td>Staffing &amp; Operations</td><td>PHP 8.0M</td><td>PHP 10.0M</td><td>PHP 11.0M</td><td>PHP 29.0M</td></tr>
 <tr><td>Training &amp; Capacity Building</td><td>PHP 2.0M</td><td>PHP 2.5M</td><td>PHP 2.0M</td><td>PHP 6.5M</td></tr>
 <tr><td>Equipment &amp; Setup</td><td>PHP 1.5M</td><td>PHP 0.5M</td><td>PHP 0.5M</td><td>PHP 2.5M</td></tr>
-<tr><td><strong>Total</strong></td><td><strong>PHP 43.2M</strong></td><td><strong>PHP 60.0M</strong></td><td><strong>PHP 56.5M</strong></td><td><strong>PHP 159.7M</strong></<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>td></tr>
+<tr><td><strong>Total</strong></td><td><strong>PHP 43.2M</strong></td><td><strong>PHP 60.0M</strong></td><td><strong>PHP 56.5M</strong></td><td><strong>PHP 159.7M</strong></td></tr>
 </table>
 
 <div class="callout info"><strong>Note:</strong> These figures are estimates based on comparable regional tourism office budgets in the Philippines. Actual figures should be validated against DOT central office budget circulars and annual appropriations. A detailed line-item budget is in Appendix C.</div>
@@ -1419,7 +812,7 @@ li {
 <table>
 <tr><th>Area</th><th>Deliverables</th></tr>
 <tr><td>Digital</td><td><strong>1M followers</strong>, international content in 3 languages, PHP 200K/month ads</td></tr>
-<tr><td>Marketing</td><td>Global campaign: "Bicol — Asia's Best-Kept Secret," trade show par<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>ticipation in Korea, Japan, India</td></tr>
+<tr><td>Marketing</td><td>Global campaign: "Bicol — Asia's Best-Kept Secret," trade show participation in Korea, Japan, India</td></tr>
 <tr><td>Product</td><td>All 6 provincial plans at full operation, MICE center operational</td></tr>
 <tr><td>Outcome</td><td><strong>8.5M arrivals, PHP 34.5B revenue, 600K foreign tourists</strong></td></tr>
 </table>
@@ -1440,66 +833,27 @@ li {
 
 <h1>16. Appendices</h1>
 
-<h2>16.1 Comprehensive ASEAN Standards Compliance Checklist</h2>
-<p>The ASEAN Tourism Strategic Plan (ATSP) 2026-2030 establishes 25 standards across 5 focus areas (READS framework). Below is Bicol's detailed compliance assessment against each standard, with specific action items and target compliance dates.</p>
-
-<table>
-<tr><th>Code</th><th>Standard</th><th>Requirement</th><th>Bicol Status</th><th>Action Required</th><th>Target Date</th><th>Lead</th></tr>
-<tr><td>R1</td><td>Tourism Crisis Communication Plan</td><td>Plan must exist, be tested, include protocols for natural disasters, health emergencies</td><td> [Not Done]  Not Started</td><td>Draft crisis plan based on NDRRMP template; conduct tabletop exercise</td><td>Q4 2026</td><td>Planning</td></tr>
-<tr><td>R2</td><td>Tourist Assistance Scheme</td><td>Visitors must have access to emergency assistance and travel insurance</td><td> [Not Done]  Not Started</td><td>Partner with insurance provider; establish 24/7 tourist hotline</td><td>2027</td><td>Marketing</td></tr>
-<tr><td>R3</td><td>Climate Adaptation</td><td>Tourism infrastructure must incorporate climate risk assessment</td><td> [Partial]  Partial</td><td>Integrate climate risk into all DOT infrastructure projects</td><td>2027</td><td>Product Dev</td></tr>
-<tr><td>R4</td><td>Business Continuity for MSMEs</td><td>Tourism enterprises must have BCP training and templates</td><td> [Not Done]  Not Started</td><td>Develop BCP templates; conduct training in 6 provinces</td><td>2027</td><td>Product Dev</td></tr>
-<tr><td>R5</td><td>Health & Safety Certification</td><td>Establishments must meet health and safety standards</td><td> [Partial]  Partial</td><td>Incorporate health into Quality Seal; adopt ASEAN sanitization</td><td>Q2 2027</td><td>QA</td></tr>
-<tr><td>E1</td><td>ASEAN MRA Alignment</td><td>Training programs must align with ASEAN competency standards</td><td> [Not Done]  Not Started</td><td>Map DOT training to ASEAN MRA; curriculum revision</td><td>2027</td><td>Training</td></tr>
-<tr><td>E2</td><td>Women/Youth Inclusion</td><td>Specific programs for women and youth in tourism</td><td> [Partial]  Partial</td><td>Set targets (40% women); develop "Women in Bicol Tourism"</td><td>2027</td><td>Product Dev</td></tr>
-<tr><td>E3</td><td>PWD Accessibility</td><td>Major sites must be accessible to persons with disabilities</td><td> [Not Done]  Not Started</td><td>Audit top 20 sites; develop barrier removal plan</td><td>2028</td><td>Product Dev</td></tr>
-<tr><td>A1</td><td>Multi-Modal Connectivity</td><td>Seamless travel between transport modes</td><td> [Partial]  Partial</td><td>Transport integration plan; coordinate with DOTR, CAAP, PPA</td><td>2027</td><td>RD's Office</td></tr>
-<tr><td>A2</td><td>Second-Tier Access</td><td>Less-visited destinations must have improved access</td><td> [Not Done]  Not Started</td><td>Masbate and Catanduanes access program</td><td>2028</td><td>RD's Office</td></tr>
-<tr><td>A3</td><td>BIMP-EAGA Circuits</td><td>Participation in cross-border tourism circuits</td><td> [Not Done]  Not Started</td><td>Explore BIMP-EAGA tourism positioning</td><td>2028</td><td>Marketing</td></tr>
-<tr><td>D1</td><td>Digital Platform for MSMEs</td><td>Enterprises should have access to digital booking platforms</td><td> [Not Done]  Not Started<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p></td><td>Develop Bicol Tourism Marketplace platform</td><td>2027</td><td>Marketing</td></tr>
-<tr><td>D2</td><td>Data-Driven Planning</td><td>Systematic data collection and analysis</td><td> [Partial]  Partial</td><td>Implement unified data system; Bicol Tourism Dashboard</td><td>Q3 2026</td><td>Planning</td></tr>
-<tr><td>D3</td><td>Product Diversification</td><td>Diverse products beyond nature/culture</td><td> [Partial]  Partial</td><td>Execute MICE, gastronomy, wellness, cruise, adventure plans</td><td>2026-28</td><td>Product Dev</td></tr>
-<tr><td>S1</td><td>ASEAN Green Hotel Standards</td><td>Hotels should meet ASEAN Green certification</td><td> [Not Done]  Not Started</td><td>Recruit 20 hotels for certification</td><td>2027</td><td>QA</td></tr>
-<tr><td>S2</td><td>Certified CBT</td><td>Community tourism enterprises should be certified</td><td> [Partial]  5 informal</td><td>Develop CBT certification; certify 20 in 3 years</td><td>2028</td><td>Product Dev</td></tr>
-<tr><td>S3</td><td>Carrying Capacity Plans</td><td>Protected areas must have carrying capacity management</td><td> [Not Done]  Not Started</td><td>Studies for Caramoan, Calaguas, Mayon PDZ, Donsol, Ticao</td><td>2027</td><td>DENR+DOT</td></tr>
-</table>
-
-<h2>16.2 Sustainable Tourism Certification Pathway</h2>
-<p>The Bicol Tourism Quality Seal follows a progressive certification pathway that aligns with international standards while remaining accessible to small enterprises. The pathway has five levels, each representing a step toward international certification standards.</p>
-
-<table>
-<tr><th>Level</th><th>Requirements</th><th>Benefits for Enterprise</th><th>Fees</th><th>Validity</th></tr>
-<tr><td>Star  Basic</td><td>DOT-registered, business permit, basic safety, complaint mechanism, waste segregation</td><td>Listing on DOT V website, promotional mater<p style="font-size:8pt; color:#555; margin-bottom:4pt;">The following table presents supporting data referenced in the preceding analysis. All figures are from official DOT sources unless otherwise cited.</p>ials inclusion</td><td>Free</td><td>1 year</td></tr>
-<tr><td>Star Star  Standard</td><td>Basic + trained staff, basic English, cleanliness certification, guest feedback system</td><td>Above + DOT V social media feature, inclusion in travel trade materials</td><td>PHP 500</td><td>2 years</td></tr>
-<tr><td>Star Star Star  Excellent</td><td>Standard + sustainability practices, online booking, PWD accessibility, local sourcing (30%+)</td><td>Above + priority in DOT marketing campaigns, fam trip inclusion</td><td>PHP 1,000</td><td>2 years</td></tr>
-<tr><td>Star Star Star Star  Premium</td><td>Excellent + international certifications, multi-language materials, carbon measurement</td><td>Above + featured partner status, international trade show representation</td><td>PHP 2,500</td><td>3 years</td></tr>
-<tr><td>Star Star Star Star Star  World Class</td><td>ASEAN standards compliance, published sustainability report, industry awards</td><td>Above + flagship partner, case study documentation, leadership recognition</td><td>PHP 5,000</td><td>3 years</td></tr>
-</table>
-
-<div class="callout info"><strong>Quality Seal Target:</strong> Year 1: 50 enterprises certified (Basic + Standard). Year 2: 150 enterprises (including Excellent). Year 3: 300 enterprises (including Premium and World Class). The program is designed to be self-funding through certification fees by Year 3, with initial seed funding from the DOT V training budget.</div>
-
-
 <h2>16.1 ASEAN Tourism Standards Compliance Checklist</h2>
 <p>Use this checklist to track Bicol's compliance with the ASEAN Tourism Strategic Plan 2026-2030.</p>
 <table>
 <tr><th>ASEAN Standard</th><th>Requirement</th><th>Bicol Status</th><th>Action Needed</th><th>Target Date</th></tr>
-<tr><td>R1</td><td>Tourism crisis communication plan exists and tested</td><td> [Not Done]  Not done</td><td>Draft crisis plan, conduct tabletop exercise</td><td>Q4 2026</td></tr>
-<tr><td>R2</td><td>Tourism insurance/assistance scheme for visitors</td><td> [Not Done]  Not done</td><td>Partner with insurance providers for tourist coverage</td><td>2027</td></tr>
-<tr><td>R3</td><td>Climate adaptation plan for tourism infrastructure</td><td> [Partial]  Partial</td><td>Integrate climate risk into infrastructure planning</td><td>2027</td></tr>
-<tr><td>R4</td><td>Business continuity training for tourism MSMEs</td><td> [Not Done]  Not done</td><td>Develop BCP template and training program</td><td>2027</td></tr>
-<tr><td>R5</td><td>Health and safety protocols certified</td><td> [Partial]  Partial</td><td>Adopt ASEAN sanitization standards</td><td>Q2 2027</td></tr>
-<tr><td>E1</td><td>Tourism skills training aligned with ASEAN MRA</td><td> [Not Done]  Not done</td><td>Map existing training to ASEAN competency standards</td><td>2027</td></tr>
-<tr><td>E2</td><td>Women and youth inclusion programs in tourism</td><td> [Partial]  Partial</td><td>Set inclusion targets, create specific programs</td><td>2027</td></tr>
-<tr><td>E3</td><td>Accessibility for PWDs in tourism sites</td><td> [Not Done]  Not done</td><td>Audit top 20 sites, create accessibility upgrade plan</td><td>2028</td></tr>
-<tr><td>A1</td><td>Multi-modal transport connectivity plan</td><td> [Partial]  Partial</td><td>Develop Bicol transport integration plan</td><td>2027</td></tr>
-<tr><td>A2</td><td>Second-tier destination access program</td><td> [Not Done]  Not done</td><td>Masbate and Catanduanes air/sea access program</td><td>2028</td></tr>
-<tr><td>A3</td><td>Cross-border tourism circuits (BIMP-EAGA)</td><td> [Not Done]  Not done</td><td>Explore Bicol-BIMP-EAGA tourism links</td><td>2028</td></tr>
-<tr><td>D1</td><td>Digital platform for tourism MSMEs</td><td> [Not Done]  Not done</td><td>Bicol Tourism Marketplace website + app</td><td>2027</td></tr>
-<tr><td>D2</td><td>Data-driven tourism planning system</td><td> [Partial]  Partial</td><td>Implement unified data collection and dashboard</td><td>Q3 2026</td></tr>
-<tr><td>D3</td><td>Product diversification (gastronomy, wellness, MICE, cruise)</td><td> [Partial]  Partial</td><td>Execute plans in Part III of this Guidebook</td><td>2026-2028</td></tr>
-<tr><td>S1</td><td>ASEAN Green Hotel standards adopted</td><td> [Not Done]  Not done</td><td>Recruit 20 hotels for certification</td><td>2027</td></tr>
-<tr><td>S2</td><td>Community-Based Tourism certified</td><td> [Partial]  5 informal</td><td>Certify 20 CBTs under ASEAN standards</td><td>2028</td></tr>
-<tr><td>S3</td><td>Carrying capacity plans for protected areas</td><td> [Not Done]  Not done</td><td>Complete for Caramoan, Calaguas, Mayon, Donsol</td><td>2027</td></tr>
+<tr><td>R1</td><td>Tourism crisis communication plan exists and tested</td><td>❌ Not done</td><td>Draft crisis plan, conduct tabletop exercise</td><td>Q4 2026</td></tr>
+<tr><td>R2</td><td>Tourism insurance/assistance scheme for visitors</td><td>❌ Not done</td><td>Partner with insurance providers for tourist coverage</td><td>2027</td></tr>
+<tr><td>R3</td><td>Climate adaptation plan for tourism infrastructure</td><td>⚠️ Partial</td><td>Integrate climate risk into infrastructure planning</td><td>2027</td></tr>
+<tr><td>R4</td><td>Business continuity training for tourism MSMEs</td><td>❌ Not done</td><td>Develop BCP template and training program</td><td>2027</td></tr>
+<tr><td>R5</td><td>Health and safety protocols certified</td><td>⚠️ Partial</td><td>Adopt ASEAN sanitization standards</td><td>Q2 2027</td></tr>
+<tr><td>E1</td><td>Tourism skills training aligned with ASEAN MRA</td><td>❌ Not done</td><td>Map existing training to ASEAN competency standards</td><td>2027</td></tr>
+<tr><td>E2</td><td>Women and youth inclusion programs in tourism</td><td>⚠️ Partial</td><td>Set inclusion targets, create specific programs</td><td>2027</td></tr>
+<tr><td>E3</td><td>Accessibility for PWDs in tourism sites</td><td>❌ Not done</td><td>Audit top 20 sites, create accessibility upgrade plan</td><td>2028</td></tr>
+<tr><td>A1</td><td>Multi-modal transport connectivity plan</td><td>⚠️ Partial</td><td>Develop Bicol transport integration plan</td><td>2027</td></tr>
+<tr><td>A2</td><td>Second-tier destination access program</td><td>❌ Not done</td><td>Masbate and Catanduanes air/sea access program</td><td>2028</td></tr>
+<tr><td>A3</td><td>Cross-border tourism circuits (BIMP-EAGA)</td><td>❌ Not done</td><td>Explore Bicol-BIMP-EAGA tourism links</td><td>2028</td></tr>
+<tr><td>D1</td><td>Digital platform for tourism MSMEs</td><td>❌ Not done</td><td>Bicol Tourism Marketplace website + app</td><td>2027</td></tr>
+<tr><td>D2</td><td>Data-driven tourism planning system</td><td>⚠️ Partial</td><td>Implement unified data collection and dashboard</td><td>Q3 2026</td></tr>
+<tr><td>D3</td><td>Product diversification (gastronomy, wellness, MICE, cruise)</td><td>⚠️ Partial</td><td>Execute plans in Part III of this Guidebook</td><td>2026-2028</td></tr>
+<tr><td>S1</td><td>ASEAN Green Hotel standards adopted</td><td>❌ Not done</td><td>Recruit 20 hotels for certification</td><td>2027</td></tr>
+<tr><td>S2</td><td>Community-Based Tourism certified</td><td>⚠️ 5 informal</td><td>Certify 20 CBTs under ASEAN standards</td><td>2028</td></tr>
+<tr><td>S3</td><td>Carrying capacity plans for protected areas</td><td>❌ Not done</td><td>Complete for Caramoan, Calaguas, Mayon, Donsol</td><td>2027</td></tr>
 </table>
 
 <h2>16.2 Glossary of Terms</h2>
@@ -1534,14 +888,14 @@ li {
 <h2>16.4 Sample Content Calendar Template</h2>
 <table>
 <tr><th>Date</th><th>Platform</th><th>Pillar</th><th>Content Type</th><th>Caption Theme</th><th>Assets Needed</th><th>Status</th></tr>
-<tr><td>June 1</td><td>Facebook</td><td>#BicolWOW</td><td>Reel</td><td>Mayon Sunrise Timelapse</td><td>Drone footage</td><td> Planned</td></tr>
-<tr><td>June 1</td><td>Instagram</td><td>#BicolGuide</td><td>Carousel</td><td>10 Budget Hotels in Legazpi</td><td>Hotel photos</td><td> Planned</td></tr>
-<tr><td>June 2</td><td>Facebook</td><td>#BicolFoodie</td><td>Photo</td><td>Laing — The Dish You Need to Try</td><td>Food photography</td><td> Planned</td></tr>
-<tr><td>June 2</td><td>TikTok</td><td>#BicolWOW</td><td>Reel</td><td>Whale Shark Encounter POV</td><td>GoPro footage</td><td> Planned</td></tr>
-<tr><td>June 3</td><td>Facebook</td><td>#BicolanoPride</td><td>Text + Photo</td><td>Did You Know? Bicol's Spanish Heritage</td><td>Research + photos</td><td> Planned</td></tr>
-<tr><td>June 3</td><td>YouTube</td><td>Travel Guide</td><td>Video</td><td>Bicol on a Budget: PHP 1,500/Day</td><td>Edited video</td><td> Planned</td></tr>
-<tr><td>June 4</td><td>Facebook</td><td>#BicolPeople</td><td>Photo + Interview</td><td>The Pili Farmer of Camarines Sur</td><td>Interview footage</td><td> Planned</td></tr>
-<tr><td>June 4</td><td>Instagram</td><td>#BicolNow</td><td>Story</td><td>Weekend Events in Naga</td><td>Event graphics</td><td> Planned</td></tr>
+<tr><td>June 1</td><td>Facebook</td><td>#BicolWOW</td><td>Reel</td><td>Mayon Sunrise Timelapse</td><td>Drone footage</td><td>📝 Planned</td></tr>
+<tr><td>June 1</td><td>Instagram</td><td>#BicolGuide</td><td>Carousel</td><td>10 Budget Hotels in Legazpi</td><td>Hotel photos</td><td>📝 Planned</td></tr>
+<tr><td>June 2</td><td>Facebook</td><td>#BicolFoodie</td><td>Photo</td><td>Laing — The Dish You Need to Try</td><td>Food photography</td><td>📝 Planned</td></tr>
+<tr><td>June 2</td><td>TikTok</td><td>#BicolWOW</td><td>Reel</td><td>Whale Shark Encounter POV</td><td>GoPro footage</td><td>📝 Planned</td></tr>
+<tr><td>June 3</td><td>Facebook</td><td>#BicolanoPride</td><td>Text + Photo</td><td>Did You Know? Bicol's Spanish Heritage</td><td>Research + photos</td><td>📝 Planned</td></tr>
+<tr><td>June 3</td><td>YouTube</td><td>Travel Guide</td><td>Video</td><td>Bicol on a Budget: PHP 1,500/Day</td><td>Edited video</td><td>📝 Planned</td></tr>
+<tr><td>June 4</td><td>Facebook</td><td>#BicolPeople</td><td>Photo + Interview</td><td>The Pili Farmer of Camarines Sur</td><td>Interview footage</td><td>📝 Planned</td></tr>
+<tr><td>June 4</td><td>Instagram</td><td>#BicolNow</td><td>Story</td><td>Weekend Events in Naga</td><td>Event graphics</td><td>📝 Planned</td></tr>
 </table>
 
 <h2>16.5 Investment Proposal Template</h2>
@@ -1561,7 +915,7 @@ li {
 <div style="text-align:center; margin: 2cm 0; padding: 1cm; border-top: 2px solid #1a6b3c;">
 <p style="font-size: 10pt; color: #666;">
   <strong>Bicol Region Tourism Strategic Guidebook 2026–2028</strong><br>
-  Prepared for the Department of Tourism Region V · Market and Product Development Division<br>
+  Prepared for the Department of Tourism Region V<br>
   Data sources: DOT Bicol Regional Office, Philippine Statistics Authority, ASEAN Secretariat,<br>
   Tourism New Zealand, World Tourism Organization (UNWTO)<br>
   Generated using opencode-skill-pack · June 2026
